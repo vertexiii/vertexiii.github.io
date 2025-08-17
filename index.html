@@ -1,14 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vertex 3 Games</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
-</body>
+  <nav>
+    <img src="vertex.png" alt="Vertex 3 Logo">
+    <h1>Vertex 3</h1>
+  </nav>
+  
+  <main>
+    <div class="search-bar">
+      <input type="text" placeholder="Search games..." id="search">
+      <i class="fas fa-search"></i>
+    </div>
+  
+    <div class="games-container" id="games"></div>
+    <div class="pagination" id="pagination"></div>
+  </main>
+  
+  <script src="src/main.js"></script>
+  </body>
+  
 </html>
