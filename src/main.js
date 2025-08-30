@@ -23,7 +23,6 @@
         const filteredGames = games.filter(g =>
             g.name.toLowerCase().includes(searchInput.value.toLowerCase())
         );
-
         const gamesPerPage = getGamesPerPage();
         const start = (page - 1) * gamesPerPage;
         const end = start + gamesPerPage;
@@ -50,7 +49,6 @@
         const filteredGames = games.filter(g =>
             g.name.toLowerCase().includes(searchInput.value.toLowerCase())
         );
-
         const gamesPerPage = getGamesPerPage();
         const pageCount = Math.ceil(filteredGames.length / gamesPerPage);
 
@@ -80,6 +78,7 @@
         fetch(url)
             .then(res => res.text())
             .then(html => {
+                if (iframe) iframe.remove();
                 iframe = document.createElement('iframe');
                 iframe.srcdoc = html;
                 iframe.style.position = 'fixed';
@@ -90,38 +89,48 @@
                 iframe.style.border = 'none';
                 iframe.style.zIndex = '9999';
                 iframe.style.backgroundColor = 'white';
-                iframe.textContent = 'Loading game... '
+                iframe.textContent = 'Loading game...';
                 document.body.appendChild(iframe);
+                focusLoop();
             });
     }
+
+    function focusLoop() {
+        if (iframe) {
+            iframe.focus();
+            requestAnimationFrame(focusLoop);
+        }
+    }
+
+    function toggleFullscreen() {
+        if (!iframe) return;
+        if (document.fullscreenElement !== iframe) {
+            iframe.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+        iframe.focus();
+    }
+
+    nav.onclick = toggleFullscreen;
 
     nav.childNodes.forEach(node => {
         if (node.nodeType === Node.ELEMENT_NODE) {
             node.onclick = () => {
-        if (iframe) {
-            iframe.remove();
-            iframe = null;
+                if (iframe) {
+                    iframe.remove();
+                    iframe = null;
                 }
             };
         }
     });
 
-    
     document.addEventListener('keydown', e => {
         if (e.ctrlKey && e.key.toLowerCase() === 'f' && iframe) {
-            e.preventDefault(); // prevent browser search
-            if (!iframe.dataset.fullscreen) {
-                iframe.style.top = '0';
-                iframe.style.height = '100%';
-                iframe.dataset.fullscreen = 'true';
-            } else {
-                iframe.style.top = nav.offsetHeight + 'px';
-                iframe.style.height = `calc(100% - ${nav.offsetHeight}px)`;
-                iframe.dataset.fullscreen = '';
-            }
+            e.preventDefault();
+            toggleFullscreen();
         }
     });
-    
 
     fetch('content.json')
         .then(res => res.json())
