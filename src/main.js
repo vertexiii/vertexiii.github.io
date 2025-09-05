@@ -75,6 +75,13 @@
     window.addEventListener('resize', refresh);
 
     function loadGame(url) {
+        if (url.startsWith("$FLASH/")) {
+            const swfPath = url.replace("$FLASH/", "flash/");
+            localStorage.setItem("Vertex3.flashUrl", swfPath);
+            window.location.href = "engine/flash/index.html";
+            return;
+        }
+    
         fetch(url)
             .then(res => res.text())
             .then(html => {
@@ -94,6 +101,7 @@
                 focusLoop();
             });
     }
+    
 
     function focusLoop() {
         if (iframe) {

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vertex3 SWF Loader</title>
+  <style>
+    html,body { height:100%; margin:0; }
+    @font-face {
+    font-family: 'SF Mono Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SFMono-Regular'), url('SFMonoRegular.woff') format('woff');
+    }
+    
+    body {
+      background:#0b0b0b;
+      color:#fff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow:hidden;
+      height:100%;
+      width:100%;
+    }
+    #loader {
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
+      z-index:20;
+    }
+    .loading-text {
+      font-size:20px;
+      font-weight:300;
+      letter-spacing:0.6px;
+      color: #ffffff;
+      white-space:nowrap;
+      opacity:0.98;
+    }
+    #swfWrapper {
+      position:absolute;
+      inset:0;
+      z-index:0;
+    }
+    object, embed, #fallback {
+      width:100%;
+      height:100%;
+      display:block;
+    }
+    #message {
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      text-align:center;
+      color:#ddd;
+      z-index:30;
+      font-size:15px;
+      max-width:86ch;
+      display:none;
+    }
+    #message input[type=text] {
+      width: min(560px, 80vw);
+      padding:8px 10px;
+      margin-top:10px;
+      border-radius:6px;
+      border:1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color:#fff;
+      font-family:inherit;
+    }
+    #message button {
+      margin-left:8px;
+      padding:8px 10px;
+      border-radius:6px;
+      border:1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color:#fff;
+      cursor:pointer;
+      font-family:inherit;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader" aria-hidden="false">
+    <div class="loading-text">Loading<span id="dots">.</span></div>
+  </div>
+  <div id="swfWrapper" aria-hidden="true"></div>
+  <div id="message"></div>
+  <script>
+    (function(){
+      const KEY = 'Vertex3.flashUrl';
+      const wrapper = document.getElementById('swfWrapper');
+      const loader = document.getElementById('loader');
+      const dotsEl = document.getElementById('dots');
+      const message = document.getElementById('message');
+      let step = 0;
+      const dotStates = ['.', '..', '...'];
+      const dotInterval = setInterval(() => {
+        step = (step + 1) % dotStates.length;
+        dotsEl.textContent = dotStates[step];
+      }, 500);
+      function showMessage(html) {
+        message.innerHTML = html;
+        message.style.display = 'block';
+        loader.style.display = 'none';
+      }
+      function hideLoader() {
+        loader.style.display = 'none';
+        wrapper.setAttribute('aria-hidden', 'false');
+      }
+      const url = (() => {
+        try {
+          return localStorage.getItem(KEY) || null;
+        } catch (e) {
+          return null;
+        }
+      })();
+      if (!url) {
+        showMessage(`No URL found in localStorage under <code>${KEY}</code>.<br>
+          Paste an SWF URL below and click "Load" to save it to localStorage and load it.` +
+          ` <div style="margin-top:12px"><input id=__url type=text placeholder="https://example.com/your.swf"><button id=__save>Load</button></div>`);
+        document.getElementById('__save').addEventListener('click', () => {
+          const v = document.getElementById('__url').value.trim();
+          if (!v) return;
+          try { localStorage.setItem(KEY, v); } catch(e) {}
+          location.reload();
+        });
+        return;
+      }
+      function createObject(swfUrl) {
+        wrapper.innerHTML = '';
+        const obj = document.createElement('object');
+        obj.type = 'application/x-shockwave-flash';
+        obj.data = swfUrl;
+        obj.style.width = '100%';
+        obj.style.height = '100%';
+        obj.id = 'swfObject';
+        const paramMovie = document.createElement('param');
+        paramMovie.name = 'movie';
+        paramMovie.value = swfUrl;
+        obj.appendChild(paramMovie);
+        const paramAllowFullScreen = document.createElement('param');
+        paramAllowFullScreen.name = 'allowFullScreen';
+        paramAllowFullScreen.value = 'true';
+        obj.appendChild(paramAllowFullScreen);
+        const fallback = document.createElement('div');
+        fallback.id = 'fallback';
+        fallback.style.display = 'none';
+        fallback.innerHTML = '<p style="padding:18px">This browser does not support Flash content. If you have a Flash player or emulator, open the SWF directly. URL: ' + swfUrl + '</p>';
+        wrapper.appendChild(obj);
+        wrapper.appendChild(fallback);
+        return obj;
+      }
+      function escapeHtml(s) {
+        return (s+'').replace(/[&<>"']/g, function(c){
+          return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c];
+        });
+      }
+      let obj = createObject(url);
+      let loaded = false;
+      function onLoadSuccess() {
+        if (loaded) return;
+        loaded = true;
+        hideLoader();
+        clearInterval(dotInterval);
+      }
+      function onLoadFail(errMsg) {
+        if (loaded) return;
+        loaded = true;
+        clearInterval(dotInterval);
+        showMessage('<strong>Failed to load SWF.</strong><br>' + (errMsg || '') + '<br><br>URL: <code>' + escapeHtml(url) + '</code>');
+      }
+      obj.addEventListener && obj.addEventListener('load', onLoadSuccess);
+      const pollTimeout = 15000;
+      const pollStart = Date.now();
+      const poll = setInterval(() => {
+        try {
+          if (obj && (obj.readyState === 4 || obj.readyState === 'complete' || obj.getSVGDocument && typeof obj.getSVGDocument === 'function')) {
+            clearInterval(poll);
+            onLoadSuccess();
+            return;
+          }
+        } catch(e) {}
+        if (Date.now() - pollStart > pollTimeout) {
+          clearInterval(poll);
+          onLoadFail();
+        }
+      }, 400);
+      window.addEventListener('error', (ev) => {
+        if (ev && ev.filename && ev.filename.indexOf(url) !== -1) {
+          onLoadFail();
+        }
+      }, true);
+    })();
+  </script>
+</body>
+</html>
