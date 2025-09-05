@@ -75,36 +75,39 @@
     window.addEventListener('resize', refresh);
 
     function loadGame(url) {
-        function loadGame(url) {
-            if (iframe) iframe.remove();
-            iframe = document.createElement('iframe');
-            iframe.style.position = 'fixed';
-            iframe.style.top = nav.offsetHeight + 'px';
-            iframe.style.left = '0';
-            iframe.style.width = '100%';
-            iframe.style.height = `calc(100% - ${nav.offsetHeight}px)`;
-            iframe.style.border = 'none';
-            iframe.style.zIndex = '9999';
-            iframe.style.backgroundColor = 'white';
-            iframe.textContent = 'Loading game...';
-            document.body.appendChild(iframe);
-        
-            if (url.startsWith("$FLASH/")) {
-                const swfPath = url.replace("$FLASH/", "flash/");
-                localStorage.setItem("Vertex3.flashUrl", swfPath);
-                iframe.src = "engine/flash/index.html";
-            } else {
-                fetch(url)
-                    .then(res => res.text())
-                    .then(html => {
-                        iframe.srcdoc = html;
-                        focusLoop();
-                    });
-            }
-        
-            focusLoop();
-        }        
+        if (iframe) iframe.remove();
+        iframe = document.createElement('iframe');
+        iframe.style.position = 'fixed';
+        iframe.style.top = nav.offsetHeight + 'px';
+        iframe.style.left = '0';
+        iframe.style.width = '100%';
+        iframe.style.height = `calc(100% - ${nav.offsetHeight}px)`;
+        iframe.style.border = 'none';
+        iframe.style.zIndex = '9999';
+        iframe.style.backgroundColor = 'white';
+        iframe.textContent = 'Loading game...';
+        document.body.appendChild(iframe);
+    
+        if (url.startsWith("$FLASH/")) {
+            const swfPath = url.replace("$FLASH/", "flash/");
+            localStorage.setItem("Vertex3.flashUrl", swfPath);
+    
+            fetch("engine/flash/index.html")
+                .then(res => res.text())
+                .then(html => {
+                    iframe.srcdoc = html;
+                    focusLoop();
+                });
+        } else {
+            fetch(url)
+                .then(res => res.text())
+                .then(html => {
+                    iframe.srcdoc = html;
+                    focusLoop();
+                });
+        }
     }
+    
     
 
     function focusLoop() {
