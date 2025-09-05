@@ -1,7 +1,7 @@
 {
     "games": [
-      { "name": "Papa's Sushiria", "icon": "icon/eaglercraft-1.12.png", "url": "$FLASH/papassushiria" },
-      { "name": "Papa's Freezeria", "icon": "icon/eaglercraft-1.12.png", "url": "$FLASH/papasfreezeria" },
+      { "name": "Papa's Sushiria", "icon": "icon/eaglercraft-1.12.png", "url": "$FLASH/papassushiria.swf" },
+      { "name": "Papa's Freezeria", "icon": "icon/eaglercraft-1.12.png", "url": "$FLASH/papasfreezeria.swf" },
       { "name": "Eaglercraft 1.12.2", "icon": "icon/eaglercraft-1.12.png", "url": "games/eaglercraft1.12/" }
     ]
   }

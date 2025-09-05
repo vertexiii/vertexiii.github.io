@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vertex3 SWF Loader</title>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
   <style>
     html,body { height:100%; margin:0; }
     @font-face {
@@ -29,14 +30,14 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
+      background:#0b0b0b;
       z-index:20;
     }
     .loading-text {
       font-size:20px;
       font-weight:300;
       letter-spacing:0.6px;
-      color: #ffffff;
+      color:#ffffff;
       white-space:nowrap;
       opacity:0.98;
     }
@@ -45,7 +46,7 @@
       inset:0;
       z-index:0;
     }
-    object, embed, #fallback {
+    ruffle-player {
       width:100%;
       height:100%;
       display:block;
@@ -131,70 +132,22 @@
         });
         return;
       }
-      function createObject(swfUrl) {
+      function createRufflePlayer(swfUrl) {
         wrapper.innerHTML = '';
-        const obj = document.createElement('object');
-        obj.type = 'application/x-shockwave-flash';
-        obj.data = swfUrl;
-        obj.style.width = '100%';
-        obj.style.height = '100%';
-        obj.id = 'swfObject';
-        const paramMovie = document.createElement('param');
-        paramMovie.name = 'movie';
-        paramMovie.value = swfUrl;
-        obj.appendChild(paramMovie);
-        const paramAllowFullScreen = document.createElement('param');
-        paramAllowFullScreen.name = 'allowFullScreen';
-        paramAllowFullScreen.value = 'true';
-        obj.appendChild(paramAllowFullScreen);
-        const fallback = document.createElement('div');
-        fallback.id = 'fallback';
-        fallback.style.display = 'none';
-        fallback.innerHTML = '<p style="padding:18px">This browser does not support Flash content. If you have a Flash player or emulator, open the SWF directly. URL: ' + swfUrl + '</p>';
-        wrapper.appendChild(obj);
-        wrapper.appendChild(fallback);
-        return obj;
-      }
-      function escapeHtml(s) {
-        return (s+'').replace(/[&<>"']/g, function(c){
-          return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c];
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        player.style.width = '100%';
+        player.style.height = '100%';
+        wrapper.appendChild(player);
+        player.load({ url: swfUrl }).then(() => {
+          hideLoader();
+          clearInterval(dotInterval);
+        }).catch(() => {
+          clearInterval(dotInterval);
+          showMessage('<strong>Failed to load SWF with Ruffle.</strong><br>URL: <code>' + swfUrl + '</code>');
         });
       }
-      let obj = createObject(url);
-      let loaded = false;
-      function onLoadSuccess() {
-        if (loaded) return;
-        loaded = true;
-        hideLoader();
-        clearInterval(dotInterval);
-      }
-      function onLoadFail(errMsg) {
-        if (loaded) return;
-        loaded = true;
-        clearInterval(dotInterval);
-        showMessage('<strong>Failed to load SWF.</strong><br>' + (errMsg || '') + '<br><br>URL: <code>' + escapeHtml(url) + '</code>');
-      }
-      obj.addEventListener && obj.addEventListener('load', onLoadSuccess);
-      const pollTimeout = 15000;
-      const pollStart = Date.now();
-      const poll = setInterval(() => {
-        try {
-          if (obj && (obj.readyState === 4 || obj.readyState === 'complete' || obj.getSVGDocument && typeof obj.getSVGDocument === 'function')) {
-            clearInterval(poll);
-            onLoadSuccess();
-            return;
-          }
-        } catch(e) {}
-        if (Date.now() - pollStart > pollTimeout) {
-          clearInterval(poll);
-          onLoadFail();
-        }
-      }, 400);
-      window.addEventListener('error', (ev) => {
-        if (ev && ev.filename && ev.filename.indexOf(url) !== -1) {
-          onLoadFail();
-        }
-      }, true);
+      createRufflePlayer(url);
     })();
   </script>
 </body>
