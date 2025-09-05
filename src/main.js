@@ -76,7 +76,7 @@
 
     function loadGame(url) {
         if (url.startsWith("$FLASH/")) {
-            const swfPath = url.replace("$FLASH/", "vertexiii.github.io/flash/");
+            const swfPath = url.replace("$FLASH/", "https://vertexiii.github.io/flash/");
             localStorage.setItem("Vertex3.flashUrl", swfPath);
             window.location.href = "engine/flash/index.html";
             return;
