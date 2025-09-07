@@ -137,7 +137,7 @@
         const launches = JSON.parse(localStorage.getItem("Vertex3.launches") || "{}");
         launches[gameName] = (launches[gameName] || 0) + 1;
         localStorage.setItem("Vertex3.launches", JSON.stringify(launches));
-    
+
         if (iframe) iframe.remove();
         iframe = document.createElement('iframe');
         iframe.style.position = 'fixed';
@@ -150,21 +150,35 @@
         iframe.style.backgroundColor = 'white';
         iframe.textContent = 'Loading game...';
         document.body.appendChild(iframe);
-    
+
         if (url.startsWith("$FLASH/")) {
             const swfPath = url.replace("$FLASH/", "flash/");
             localStorage.setItem("Vertex3.flashUrl", swfPath);
             fetch("engine/flash/index.html")
                 .then(res => res.text())
-                .then(html => { 
-                    iframe.srcdoc = html; 
-                    iframe.onload = focusLoop; 
+                .then(html => {
+                    iframe.srcdoc = html;
+                    iframe.onload = () => {
+                        const script = document.createElement('script');
+                        script.src = "src/injects.js";
+                        iframe.contentDocument.head.appendChild(script);
+
+                        focusLoop();
+                    };
+                    ;
                 });
-        } 
+        }
         if (url.startsWith("$SRC")) {
             const realUrl = url.replace("$SRC", "");
             iframe.src = realUrl;
-            iframe.onload = focusLoop;
+            iframe.onload = () => {
+                const script = document.createElement('script');
+                script.src = "src/injects.js";
+                iframe.contentDocument.head.appendChild(script);
+
+                focusLoop();
+            };
+
         } else {
             fetch(url)
                 .then(res => res.text())
@@ -173,7 +187,7 @@
                         html = html.replace(/<head>/i, `<head><base href="${url}">`);
                     }
                     iframe.srcdoc = html;
-    
+
                     // Wait until iframe fully loads
                     iframe.onload = () => {
                         if (url.includes("a-dance")) {
@@ -186,12 +200,19 @@
                             `;
                             iframe.contentDocument.head.appendChild(style);
                         }
-                        focusLoop();
+                        () => {
+                            const script = document.createElement('script');
+                            script.src = "src/injects.js";
+                            iframe.contentDocument.head.appendChild(script);
+
+                            focusLoop();
+                        };
+
                     };
                 });
         }
     }
-    
+
 
 
     function focusLoop() {
