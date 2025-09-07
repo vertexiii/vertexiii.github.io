@@ -1,26 +1,121 @@
 {
   "games": [
-    { "name": "Hollow Knight", "icon": "icon/hollowknight.png", "url": "$SRCgames/hollowknight/" },
-    { "name": "BitLife", "icon": "icon/bitlife.png", "url": "https://mackeylol.github.io/copyofmasite/Games/bitlife.html" },
-  { "name": "Bitplanes", "icon": "icon/bitplanes.png", "url": "$SRChttps://medv.io/bit-planes/" },
-  { "name": "Blackjack", "icon": "icon/blackjack.png", "url": "$FLASH/blackjack.swf" },
-  { "name": "Bloons Pop 2", "icon": "icon/bloonspop2.png", "url": "$FLASH/bloonspop2.swf" },
-  { "name": "Bloons Pop 3", "icon": "icon/bloonspop3.png", "url": "$FLASH/bloonspop3.swf" },
-  { "name": "Bloons TD 1", "icon": "icon/bloonstd1.png", "url": "$FLASH/btd1.swf" },
-  { "name": "Bloons TD 2", "icon": "icon/bloonstd2.png", "url": "$FLASH/btd2.swf" },
-  { "name": "Bloons TD 3", "icon": "icon/bloonstd3.png", "url": "$FLASH/btd3.swf" },
-  { "name": "Bloons TD 4", "icon": "icon/bloonstd4.png", "url": "$FLASH/btd4.swf" },
-  { "name": "Bloons TD 5", "icon": "icon/bloonstd5.png", "url": "$FLASH/btd5.swf" },
-  { "name": "Bloons Supermonkey", "icon": "icon/bloonssupermonkey.png", "url": "$FLASH/bloonssupermonkey.swf" },
-  { "name": "Bloxorz", "icon": "icon/bloxorz.png", "url": "$FLASH/bloxors.swf" },
-  { "name": "Bubble Shooter", "icon": "icon/bubbleshooter.png", "url": "$FLASH/bubbleshooter.swf" },
-  { "name": "Burrito Bison", "icon": "icon/burritobison.png", "url": "$FLASH/burritobison.swf" },
-  { "name": "Burrito Bison: Launcha Libre", "icon": "icon/burritobisonlaunchalibre.png", "url": "https://burritobison.gitlab.io/file/" },
-  { "name": "Burrito Bison: Revenge", "icon": "icon/burritobisonrevenge.png", "url": "$FLASH/burritobisonrevenge.swf" },
-    { "name": "The Binding of Isaac", "icon": "icon/bindingofisaac.png", "url": "$FLASH/thebindingofisaac.swf" },
-
-    { "name": "Billiards", "icon": "icon/billiards.png", "url": "$FLASH/billiards.swf" },
-
+  
+{ "name": "Crossy Road", "icon": "icon/crossyroad.png", "url": "https://gfile.pages.dev/crossy/" },
+{ "name": "Cyber Slots", "icon": "icon/cyberslots.png", "url": "$FLASH/cyberslots.swf" },
+{ "name": "Cluster Rush", "icon": "icon/clusterrush.png", "url": "$SRChttps://clusterrush.io/game/cluster-rush/" },
+{ "name": "Cut The Rope", "icon": "icon/cuttherope.png", "url": "https://cedarisasigma.github.io/clcuttherope.html" },
+    { "name": "EmulatorJS", "icon": "icon/emulatorjs.png", "url": "https://demo.emulatorjs.org/" },
+    {
+      "name": "Cheese Chompers 3D",
+      "icon": "icon/cheesechompers3d.png",
+      "url": "$SRChttps://cedarisasigma.github.io/cheese/"
+    },
+    {
+      "name": "Checkers",
+      "icon": "icon/checkers.png",
+      "url": "https://cedarisasigma.github.io/checkers/"
+    },
+    {
+      "name": "Capybara Clicker",
+      "icon": "icon/capybaraclicker.png",
+      "url": "$SRChttps://cedarisasigma.github.io/clcapybaraclicker.html"
+    },
+    {
+      "name": "Hollow Knight",
+      "icon": "icon/hollowknight.png",
+      "url": "games/hollowknight/"
+    },
+    {
+      "name": "BitLife",
+      "icon": "icon/bitlife.png",
+      "url": "https://mackeylol.github.io/copyofmasite/Games/bitlife.html"
+    },
+    {
+      "name": "Bitplanes",
+      "icon": "icon/bitplanes.png",
+      "url": "$SRChttps://medv.io/bit-planes/"
+    },
+    {
+      "name": "Blackjack",
+      "icon": "icon/blackjack.png",
+      "url": "$FLASH/blackjack.swf"
+    },
+    {
+      "name": "Bloons Pop 2",
+      "icon": "icon/bloonspop2.png",
+      "url": "$FLASH/bloonspop2.swf"
+    },
+    {
+      "name": "Bloons Pop 3",
+      "icon": "icon/bloonspop3.png",
+      "url": "$FLASH/bloonspop3.swf"
+    },
+    {
+      "name": "Bloons TD 1",
+      "icon": "icon/bloonstd1.png",
+      "url": "$FLASH/btd1.swf"
+    },
+    {
+      "name": "Bloons TD 2",
+      "icon": "icon/bloonstd2.png",
+      "url": "$FLASH/btd2.swf"
+    },
+    {
+      "name": "Bloons TD 3",
+      "icon": "icon/bloonstd3.png",
+      "url": "$FLASH/btd3.swf"
+    },
+    {
+      "name": "Bloons TD 4",
+      "icon": "icon/bloonstd4.png",
+      "url": "$FLASH/btd4.swf"
+    },
+    {
+      "name": "Bloons TD 5",
+      "icon": "icon/bloonstd5.png",
+      "url": "$FLASH/btd5.swf"
+    },
+    {
+      "name": "Bloons Supermonkey",
+      "icon": "icon/bloonssupermonkey.png",
+      "url": "$FLASH/bloonssupermonkey.swf"
+    },
+    {
+      "name": "Bloxorz",
+      "icon": "icon/bloxorz.png",
+      "url": "$FLASH/bloxors.swf"
+    },
+    {
+      "name": "Bubble Shooter",
+      "icon": "icon/bubbleshooter.png",
+      "url": "$FLASH/bubbleshooter.swf"
+    },
+    {
+      "name": "Burrito Bison",
+      "icon": "icon/burritobison.png",
+      "url": "$FLASH/burritobison.swf"
+    },
+    {
+      "name": "Burrito Bison: Launcha Libre",
+      "icon": "icon/burritobisonlaunchalibre.png",
+      "url": "https://burritobison.gitlab.io/file/"
+    },
+    {
+      "name": "Burrito Bison: Revenge",
+      "icon": "icon/burritobisonrevenge.png",
+      "url": "$FLASH/burritobisonrevenge.swf"
+    },
+    {
+      "name": "The Binding of Isaac",
+      "icon": "icon/bindingofisaac.png",
+      "url": "$FLASH/thebindingofisaac.swf"
+    },
+    {
+      "name": "Billiards",
+      "icon": "icon/billiards.png",
+      "url": "$FLASH/billiards.swf"
+    },
     {
       "name": "Basket Random",
       "icon": "icon/basketrandom.png",

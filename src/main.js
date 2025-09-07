@@ -3,13 +3,11 @@
     let currentPage = 1;
     let iframe = null;
     let currentSort = localStorage.getItem("Vertex3.sort") || 'index';
-
     const gamesContainer = document.getElementById('games');
     const paginationContainer = document.getElementById('pagination');
     const searchInput = document.getElementById('search');
     const sortSelect = document.getElementById('sort');
     const nav = document.querySelector('nav');
-
     sortSelect.value = currentSort;
 
     function getGamesPerPage() {
@@ -133,23 +131,91 @@
         refresh();
     });
 
+
+
+
+
+
+
+    // load a game
     function loadGame(url, gameName) {
+
+
+        // update launch counter
         const launches = JSON.parse(localStorage.getItem("Vertex3.launches") || "{}");
         launches[gameName] = (launches[gameName] || 0) + 1;
         localStorage.setItem("Vertex3.launches", JSON.stringify(launches));
 
+
+
+        // Remove previous iframe
         if (iframe) iframe.remove();
         iframe = document.createElement('iframe');
-        iframe.style.position = 'fixed';
-        iframe.style.top = nav.offsetHeight + 'px';
-        iframe.style.left = '0';
-        iframe.style.width = '100%';
-        iframe.style.height = `calc(100% - ${nav.offsetHeight}px)`;
-        iframe.style.border = 'none';
-        iframe.style.zIndex = '9999';
-        iframe.style.backgroundColor = 'white';
+        Object.assign(iframe.style, {
+            position: 'fixed',
+            top: nav.offsetHeight + 'px',
+            left: '0',
+            width: '100%',
+            height: `calc(100% - ${nav.offsetHeight}px)`,
+            border: 'none',
+            zIndex: '9999',
+            backgroundColor: 'white'
+        });
         iframe.textContent = 'Loading game...';
         document.body.appendChild(iframe);
+
+        function Inject(doc, gameUrl) {
+            if (!doc) return;
+            fetch('src/injects.js')
+                .then(res => res.text())
+                .then(js => {
+                    console.log("injects.js fetched");
+                    doc.defaultView.eval(js);
+                    const win = doc.defaultView;
+                    
+                    console.log("Evaluated injects.js, window object:", win);
+        
+                    if (typeof win.JavaScript === 'function') {
+                        console.log("Running default JavaScript");
+                        win.JavaScript();
+                    } else {
+                        console.warn("Default JavaScript not found");
+                    }
+        
+                    if (win.JavaScript_overrides && typeof win.JavaScript_overrides[gameUrl] === 'function') {
+                        console.log("Running JavaScript override for:", gameUrl);
+                        win.JavaScript_overrides[gameUrl]();
+                    } else {
+                        console.log("No JavaScript override for:", gameUrl);
+                    }
+        
+                    if (typeof win.CSS === 'string') {
+                        console.log("Injecting default CSS");
+                        const style = doc.createElement('style');
+                        style.textContent = win.CSS;
+                        doc.head.appendChild(style);
+                    } else {
+                        console.warn("Default CSS not found or not a string");
+                    }
+        
+                    if (win.CSS_overrides && typeof win.CSS_overrides[gameUrl] === 'string') {
+                        console.log("Injecting CSS override for:", gameUrl);
+                        const style2 = doc.createElement('style');
+                        style2.textContent = win.CSS_overrides[gameUrl];
+                        doc.head.appendChild(style2);
+                    } else {
+                        console.log("No CSS override for:", gameUrl);
+                    }
+        
+                    console.log("Finished Inject() for", gameUrl);
+                    focusLoop();
+                })
+                .catch(err => console.error("Failed to fetch or eval injects.js:", err));
+        }
+        
+        
+        
+        
 
         if (url.startsWith("$FLASH/")) {
             const swfPath = url.replace("$FLASH/", "flash/");
@@ -159,55 +225,20 @@
                 .then(html => {
                     iframe.srcdoc = html;
                     iframe.onload = () => {
-                        const script = document.createElement('script');
-                        script.src = "src/injects.js";
-                        iframe.contentDocument.head.appendChild(script);
-
-                        focusLoop();
+                        Inject(iframe.contentDocument, url);
                     };
-                    ;
                 });
-        }
-        if (url.startsWith("$SRC")) {
-            const realUrl = url.replace("$SRC", "");
-            iframe.src = realUrl;
-            iframe.onload = () => {
-                const script = document.createElement('script');
-                script.src = "src/injects.js";
-                iframe.contentDocument.head.appendChild(script);
-
-                focusLoop();
-            };
-
+        } else if (url.startsWith("$SRC")) {
+            iframe.src = url.replace("$SRC", "");
+            iframe.onload = () => Inject(iframe.contentDocument, url);
         } else {
             fetch(url)
                 .then(res => res.text())
                 .then(html => {
-                    if (url.startsWith('https://')) {
-                        html = html.replace(/<head>/i, `<head><base href="${url}">`);
-                    }
+                    if (url.startsWith('https://')) html = html.replace(/<head>/i, `<head><base href="${url}">`);
                     iframe.srcdoc = html;
-
-                    // Wait until iframe fully loads
                     iframe.onload = () => {
-                        if (url.includes("a-dance")) {
-                            const style = document.createElement('style');
-                            style.textContent = `
-                                canvas {
-                                    width: 100vw !important;
-                                    height: 100vh !important;
-                                }
-                            `;
-                            iframe.contentDocument.head.appendChild(style);
-                        }
-                        () => {
-                            const script = document.createElement('script');
-                            script.src = "src/injects.js";
-                            iframe.contentDocument.head.appendChild(script);
-
-                            focusLoop();
-                        };
-
+                        Inject(iframe.contentDocument, url);
                     };
                 });
         }
@@ -215,6 +246,9 @@
 
 
 
+
+
+    // keep focus upon the iframe
     function focusLoop() {
         if (iframe) {
             iframe.focus();
@@ -222,6 +256,10 @@
         }
     }
 
+
+
+
+    // toggle fullscreen within the iframe
     function toggleFullscreen() {
         if (!iframe) return;
         if (document.fullscreenElement !== iframe) iframe.requestFullscreen();
@@ -229,19 +267,22 @@
         iframe.focus();
     }
 
-    nav.onclick = toggleFullscreen;
 
+
+
+
+    // Render nav listeners
+    nav.onclick = toggleFullscreen;
     nav.childNodes.forEach(node => {
         if (node.nodeType === Node.ELEMENT_NODE) node.onclick = () => { if (iframe) { iframe.remove(); iframe = null; } };
     });
 
-    document.addEventListener('keydown', e => {
-        if (e.ctrlKey && e.key.toLowerCase() === 'f' && iframe) {
-            e.preventDefault();
-            toggleFullscreen();
-        }
-    });
 
+
+
+
+
+    // Load games from content.json
     fetch('content.json')
         .then(res => res.json())
         .then(data => { games = data.games; refresh(); });
