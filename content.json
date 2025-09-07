@@ -1,8 +1,110 @@
 {
-    "games": [
-      { "name": "Papa's Sushiria", "icon": "icon/papassushiria.png", "url": "$FLASH/papassushiria.swf" },
-      { "name": "Papa's Freezeria", "icon": "icon/papasfreezeria.png", "url": "$FLASH/papasfreezeria.swf" },
-      { "name": "Eaglercraft 1.12.2", "icon": "icon/eaglercraft-1.12.png", "url": "games/eaglercraft1.12/" }
-    ]
-  }
-  
+  "games": [
+    { "name": "Hollow Knight", "icon": "icon/hollowknight.png", "url": "games/hollowknight/" },
+    { "name": "BitLife", "icon": "icon/bitlife.png", "url": "https://mackeylol.github.io/copyofmasite/Games/bitlife.html" },
+  { "name": "Bitplanes", "icon": "icon/bitplanes.png", "url": "$SRChttps://medv.io/bit-planes/" },
+  { "name": "Blackjack", "icon": "icon/blackjack.png", "url": "$FLASH/blackjack.swf" },
+  { "name": "Bloons Pop 2", "icon": "icon/bloonspop2.png", "url": "$FLASH/bloonspop2.swf" },
+  { "name": "Bloons Pop 3", "icon": "icon/bloonspop3.png", "url": "$FLASH/bloonspop3.swf" },
+  { "name": "Bloons TD 1", "icon": "icon/btd1.png", "url": "$FLASH/btd1.swf" },
+  { "name": "Bloons TD 2", "icon": "icon/btd2.png", "url": "$FLASH/btd2.swf" },
+  { "name": "Bloons TD 3", "icon": "icon/btd3.png", "url": "$FLASH/btd3.swf" },
+  { "name": "Bloons TD 4", "icon": "icon/btd4.png", "url": "$FLASH/btd4.swf" },
+  { "name": "Bloons TD 5", "icon": "icon/btd5.png", "url": "$FLASH/btd5.swf" },
+  { "name": "Bloons Supermonkey", "icon": "icon/bloonssupermonkey.png", "url": "$FLASH/bloonssupermonkey.swf" },
+  { "name": "Bloxorz", "icon": "icon/bloxorz.png", "url": "$FLASH/bloxors.swf" },
+  { "name": "Bubble Shooter", "icon": "icon/bubbleshooter.png", "url": "$FLASH/bubbleshooter.swf" },
+  { "name": "Burrito Bison", "icon": "icon/burritobison.png", "url": "$FLASH/burritobison.swf" },
+  { "name": "Burrito Bison: Launcha Libre", "icon": "icon/burritobisonlaunchalibre.png", "url": "https://burritobison.gitlab.io/file/" },
+  { "name": "Burrito Bison: Revenge", "icon": "icon/burritobisonrevenge.png", "url": "$FLASH/burritobisonrevenge.swf" },
+    { "name": "The Binding of Isaac", "icon": "icon/bindingofisaac.png", "url": "$FLASH/thebindingofisaac.swf" },
+
+    { "name": "Billiards", "icon": "icon/billiards.png", "url": "$FLASH/billiards.swf" },
+
+    {
+      "name": "Basket Random",
+      "icon": "icon/basketrandom.png",
+      "url": "https://cedarisasigma.github.io/basketrandom/"
+    },
+    {
+      "name": "Bad Piggies",
+      "icon": "icon/badpiggies.png",
+      "url": "$FLASH/badpiggies.swf"
+    },
+    {
+      "name": "Angry Birds",
+      "icon": "icon/angrybirds.png",
+      "url": "$FLASH/angrybirds.swf"
+    },
+    {
+      "name": "Angry Birds Rio",
+      "icon": "icon/angrybirdsrio.png",
+      "url": "$FLASH/angrybirdsrio.swf"
+    },
+    {
+      "name": "Angry Birds: Slingshot Frenzy",
+      "icon": "icon/angrybirdsslingshotfrenzy.png",
+      "url": "https://ossietheostrich.github.io/angrybirdsslingshotfrenzy-alpha/"
+    },
+    {
+      "name": "Age of War 2",
+      "icon": "icon/ageofwar2.png",
+      "url": "$FLASH/ageofwar2.swf"
+    },
+    {
+      "name": "Age of War",
+      "icon": "icon/ageofwar.png",
+      "url": "$FLASH/ageofwar.swf"
+    },
+    {
+      "name": "A Dark Room",
+      "icon": "icon/adarkroom.png",
+      "url": "https://cedarisasigma.github.io/adarkroom/"
+    },
+    {
+      "name": "A Dance of Fire & Ice",
+      "icon": "icon/adanceoffireandice.png",
+      "url": "https://warpedentrance2.github.io/crazya.github.io/games/a-dance-of-fire-and-ice/"
+    },
+    {
+      "name": "2048 Cupcakes",
+      "icon": "icon/2048cupcakes.png",
+      "url": "https://cedarisasigma.github.io/2048cupcakes/"
+    },
+    {
+      "name": "2048",
+      "icon": "icon/2048.png",
+      "url": "https://slicey64.github.io/2048/"
+    },
+    {
+      "name": "1 On 1 Tennis",
+      "icon": "icon/1o1tennis.png",
+      "url": "$FLASH/1o1tennis.swf"
+    },
+    {
+      "name": "1 On 1 Soccer",
+      "icon": "icon/1o1soccer.png",
+      "url": "$FLASH/1o1soccer.swf"
+    },
+    {
+      "name": "10 Minutes Till Dawn",
+      "icon": "icon/10minutestilldawn.png",
+      "url": "https://xoriushourz.github.io/10-Minutes-Till-Dawn/"
+    },
+    {
+      "name": "Papa's Sushiria",
+      "icon": "icon/papassushiria.png",
+      "url": "$FLASH/papassushiria.swf"
+    },
+    {
+      "name": "Papa's Freezeria",
+      "icon": "icon/papasfreezeria.png",
+      "url": "$FLASH/papasfreezeria.swf"
+    },
+    {
+      "name": "Eaglercraft 1.12.2",
+      "icon": "icon/eaglercraft1.12.png",
+      "url": "games/eaglercraft1.12/"
+    }
+  ]
+}

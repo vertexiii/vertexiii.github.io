@@ -14,10 +14,17 @@
   </nav>
   
   <main>
-    <div class="search-bar">
-      <input type="text" placeholder="Search games..." id="search">
-      <i class="fas fa-search"></i>
-    </div>
+    <div class="controls">
+      <div class="search-bar">
+        <input type="text" placeholder="Search games..." id="search">
+        <i class="fas fa-search"></i>
+      </div>
+      <select id="sort">
+        <option value="index">By Index</option>
+        <option value="alphabet">Alphabetical</option>
+        <option value="launches">Most Launched</option>
+      </select>
+    </div>    
   
     <div class="games-container" id="games"></div>
     <div class="pagination" id="pagination"></div>
