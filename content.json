@@ -1,7 +1,7 @@
 {
   "games": [
     { "name": "Don't Shoot the Puppy", "icon": "icon/dontshootthepuppy.png", "url": "$FLASH/dontshoothtepuppy.swf" },
-{ "name": "Drift Boss", "icon": "icon/driftboss.png", "url": "$SRChttps://idkbutdisisatest.neocities.org/game/drift-boss/" },
+{ "name": "Drift Boss", "icon": "icon/driftboss.png", "url": "https://ubg98.github.io/DriftBoss/" },
 { "name": "Drive Mad", "icon": "icon/drivemad.png", "url": "https://eminence5070.github.io/games/drivemad/" },
 { "name": "Duck Hunt", "icon": "icon/duckhunt.png", "url": "https://mmankar35.github.io/PAI-Games/games/duck-hunt/index.html" },
 { "name": "Duck Life", "icon": "icon/ducklife.png", "url": "$FLASH/ducklife.swf" },
