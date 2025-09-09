@@ -1,5 +1,7 @@
 {
   "games": [
+    { "name": "Slowroads", "icon": "icon/slowroads.png", "url": "games/slowroads/" },
+    { "name": "AdVenture Capitalist", "icon": "icon/adventurecapitalist.png", "url": "games/adventurecapitalist/" },
     { "name": "Undertale", "icon": "icon/undertale.png", "url": "games/undertale/" },
     { "name": "Undertale Yellow", "icon": "icon/undertaleyellow.png", "url": "games/undertale/yellow.html" },
     { "name": "Deltarune", "icon": "icon/deltarune.png", "url": "games/deltarune/" },
