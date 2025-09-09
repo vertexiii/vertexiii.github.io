@@ -1,5 +1,7 @@
 {
   "games": [
+{ "name": "Friday Night Funkin: Megapack", "icon": "icon/fridaynightfunkinmegapack.png", "url": "https://realdunkin.github.io/fnfmegapack-html5-test/" },
+
     { "name": "Eagle Ride 3D", "icon": "icon/eagleride3d.png", "url": "https://cedarisasigma.github.io/eag/" },
 { "name": "Eggy Car", "icon": "icon/eggycar.png", "url": "games/eggycar/" },
 
