@@ -39,41 +39,57 @@
         const filtered = sortedGames.filter(g => g.name.toLowerCase().includes(searchInput.value.toLowerCase()));
         const perPage = getGamesPerPage();
         const pageGames = filtered.slice((page - 1) * perPage, (page - 1) * perPage + perPage);
-
+    
         const cardWidth = 180;
         const cardGap = 20;
         const cardFullWidth = cardWidth + cardGap;
         const columns = Math.max(1, Math.floor(gamesContainer.clientWidth / cardFullWidth));
         const rows = Math.ceil(pageGames.length / columns);
-
+    
         let firstRowLeft = 0;
-
+    
         for (let r = 0; r < rows; r++) {
             const rowDiv = document.createElement('div');
             rowDiv.className = 'game-row';
             rowDiv.style.display = 'flex';
             rowDiv.style.gap = `${cardGap}px`;
-
+    
             const rowGames = pageGames.slice(r * columns, r * columns + columns);
-
+    
             rowGames.forEach((game, idx) => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
-                card.innerHTML = `<img src="${game.icon}" alt="${game.name}"><h3>${game.name}</h3>`;
+    
+                // Create the title element
+                const title = document.createElement('h3');
+                title.textContent = game.name;
+    
+                // Gradually decrease font size for long titles
+                let fontSize = "1.7em"; // default font size in px
+                const maxLength = 28;
+                if (game.name.length > maxLength) {
+                    fontSize = Math.max(10, 16 - (game.name.length - maxLength) * 0.5);
+                }
+                title.style.fontSize = fontSize + 'px';
+    
+                // Add icon and title to card
+                card.innerHTML = `<img src="${game.icon}" alt="${game.name}">`;
+                card.appendChild(title);
+    
                 card.style.opacity = 0;
                 card.style.transform = 'translateY(20px)';
                 card.onclick = () => loadGame(game.url, game.name);
                 rowDiv.appendChild(card);
-
+    
                 setTimeout(() => {
                     card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
                     card.style.opacity = 1;
                     card.style.transform = 'translateY(0)';
                 }, (r * columns + idx) * 50);
             });
-
+    
             gamesContainer.appendChild(rowDiv);
-
+    
             if (r === 0) {
                 if (rows === 1 && rowGames.length < columns) {
                     firstRowLeft = 0;
@@ -84,17 +100,18 @@
                     rowDiv.style.paddingLeft = `${firstRowLeft}px`;
                 }
             }
-
+    
             if (r === 1) {
                 rowDiv.style.position = 'absolute';
                 rowDiv.style.top = `${(220 + cardGap)}px`;
                 rowDiv.style.left = `${firstRowLeft + 10}px`;
             }
         }
-
+    
         gamesContainer.style.position = 'relative';
         gamesContainer.style.height = `${rows * (220 + cardGap)}px`;
     }
+    
 
 
     function renderPagination() {

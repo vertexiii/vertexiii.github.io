@@ -1,5 +1,12 @@
 {
   "games": [
+    { "name": "Happy Wheels", "icon": "icon/happywheels.png", "url": "$FLASH/happywheels.swf" },
+{ "name": "Henry Stickmin: Breaking The Bank", "icon": "icon/henrybreaking.png", "url": "$FLASH/breakingthebank.swf" },
+{ "name": "Henry Stickmin: Escaping The Prison", "icon": "icon/henryescaping.png", "url": "$FLASH/escapingtheprison.swf" },
+{ "name": "Henry Stickmin: Fleeing The Complex", "icon": "icon/henryfleeing.png", "url": "$FLASH/fleeingthecomplex.swf" },
+{ "name": "Henry Stickmin: Infiltrating The Airship", "icon": "icon/henryairship.png", "url": "$FLASH/infiltratingtheairship.swf" },
+{ "name": "Henry Stickmin: Stealing The Diamond", "icon": "icon/henrystealing.png", "url": "$FLASH/stealingthediamond.swf" },
+
 { "name": "Friday Night Funkin: Megapack", "icon": "icon/fridaynightfunkinmegapack.png", "url": "https://realdunkin.github.io/fnfmegapack-html5-test/" },
 
     { "name": "Eagle Ride 3D", "icon": "icon/eagleride3d.png", "url": "https://cedarisasigma.github.io/eag/" },
@@ -13,6 +20,12 @@
 { "name": "Duck Life 3", "icon": "icon/ducklife3.png", "url": "$FLASH/ducklife3.swf" },
 { "name": "Duck Life 4", "icon": "icon/ducklife4.png", "url": "$FLASH/ducklife4.swf" },
 { "name": "Duck Life 5", "icon": "icon/ducklife5.png", "url": "$FLASH/ducklife5.swf" },
+{ "name": "Happy Wheels", "icon": "icon/happywheels.png", "url": "https://eminence5070.github.io/--vertex-flash-player.html?href=https://eminence5070.github.io/games/flash/happywheels.swf" },
+{ "name": "Henry Stickmin: Breaking the Bank", "icon": "icon/henrybreaking.png", "url": "https://eminence5070.github.io/--vertex-flash-player.html?href=https://eminence5070.github.io/games/flash/breakingthebank.swf" },
+{ "name": "Henry Stickmin: Escaping the Prison", "icon": "icon/henryescaping.png", "url": "https://eminence5070.github.io/--vertex-flash-player.html?href=https://henrystickmanunblocked.github.io/escaping-the-prison/swf/escaping-the-prison.swf" },
+{ "name": "Henry Stickmin: Fleeing the Complex", "icon": "icon/henryfleeing.png", "url": "https://eminence5070.github.io/--vertex-flash-player.html?href=https://henrystickmanunblocked.github.io/fleeing-the-complex/swf/fleeing-the-complex.swf" },
+{ "name": "Henry Stickmin: Infiltrating the Airship", "icon": "icon/henryairship.png", "url": "https://eminence5070.github.io/--vertex-flash-player.html?href=https://henrystickmanunblocked.github.io/infiltrating-the-airship/swf/infiltrating-the-airship.swf" },
+{ "name": "Henry Stickmin: Stealing the Diamond", "icon": "icon/henrystealing.png", "url": "https://eminence5070.github.io/--vertex-flash-player.html?href=https://henrystickmanunblocked.github.io/stealing-the-diamond/swf/stealing-the-diamond.swf" },
 
     {
       "name": "Crossy Road",
