@@ -1,5 +1,8 @@
 {
   "games": [
+    { "name": "Eagle Ride 3D", "icon": "icon/eagleride3d.png", "url": "https://cedarisasigma.github.io/eag/" },
+{ "name": "Eggy Car", "icon": "icon/eggycar.png", "url": "games/eggycar/" },
+
     { "name": "Don't Shoot The Puppy", "icon": "icon/dontshootthepuppy.png", "url": "$FLASH/dontshoothtepuppy.swf" },
 { "name": "Drive Mad", "icon": "icon/drivemad.png", "url": "https://eminence5070.github.io/games/drivemad/" },
 { "name": "Duck Hunt", "icon": "icon/duckhunt.png", "url": "https://mmankar35.github.io/PAI-Games/games/duck-hunt/index.html" },
