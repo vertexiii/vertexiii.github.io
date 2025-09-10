@@ -1,5 +1,11 @@
 {
   "games": [
+    { "name": "Crazy Cattle 3D", "icon": "icon/slowrads.png", "url": "games/crazycattle3d/" },
+    { "name": "Chess", "icon": "icon/slowrads.png", "url": "games/chess/" },
+    { "name": "Celeste PICO", "icon": "icon/slowrads.png", "url": "games/celestepico/" },
+    { "name": "Block Blast", "icon": "icon/slowrads.png", "url": "games/blockblast/" },
+    { "name": "Ages of Conflict", "icon": "icon/slowrads.png", "url": "games/agesofconflict/" },
+    { "name": "Awesome Tanks 2", "icon": "icon/slowrads.png", "url": "$FLASH/awesometanks2.swf" },
     { "name": "Slowroads", "icon": "icon/slowroads.png", "url": "games/slowroads/" },
     { "name": "AdVenture Capitalist", "icon": "icon/adventurecapitalist.png", "url": "games/adventurecapitalist/" },
     { "name": "Undertale", "icon": "icon/undertale.png", "url": "games/undertale/" },
