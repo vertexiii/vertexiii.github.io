@@ -1,6 +1,11 @@
 {
   "games": [
     {
+      "name": "The Final Earth 2",
+      "icon": "icon/thefinalearth2.png",
+      "url": "games/thefinalearth2/"
+    },
+    {
       "name": "Wordle",
       "icon": "icon/wordle.png",
       "url": "https://bosorioo.github.io/wordle-unlimited/"
