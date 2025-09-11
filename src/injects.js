@@ -18,7 +18,7 @@ window.JavaScript = () => {
     document.head.appendChild(script);
 };
 
-window.CSS = `
+window.CSSi = `
     #unity-warning {
         visibility: hidden;
     }

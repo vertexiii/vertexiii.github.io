@@ -203,10 +203,10 @@
                         console.log("No JavaScript override for:", gameUrl);
                     }
         
-                    if (typeof win.CSS === 'string') {
+                    if (typeof win.CSSi === 'string') {
                         console.log("Injecting default CSS");
                         const style = doc.createElement('style');
-                        style.textContent = win.CSS;
+                        style.textContent = win.CSSi;
                         doc.head.appendChild(style);
                     } else {
                         console.warn("Default CSS not found or not a string");
