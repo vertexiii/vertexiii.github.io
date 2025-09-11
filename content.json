@@ -1,40 +1,165 @@
 {
   "games": [
-    { "name": "Wordle", "icon": "icon/wordle.png", "url": "https://bosorioo.github.io/wordle-unlimited/" },
-    { "name": "Retro Bowl", "icon": "icon/retrobowl.png", "url": "games/retrobowl/" },
-    { "name": "Cookie Clicker", "icon": "icon/cookieclicker.png", "url": "games/cookieclicker/" },
-    { "name": "Crazy Cars", "icon": "icon/crazycars.png", "url": "games/crazycars/" },
-    { "name": "Monkey Mart", "icon": "icon/monkeymart.png", "url": "games/monkeymart/" },
-    { "name": "Crazy Cattle 3D", "icon": "icon/crazycattle3d.png", "url": "games/crazycattle3d/" },
-    { "name": "Chess", "icon": "icon/chess.png", "url": "games/chess/" },
-    { "name": "Celeste PICO", "icon": "icon/celestepico.png", "url": "games/celestepico/" },
-    { "name": "Block Blast", "icon": "icon/blockblast.png", "url": "games/blockblast/" },
-    { "name": "Ages of Conflict", "icon": "icon/agesofconflict.png", "url": "games/agesofconflict/" },
-    { "name": "Awesome Tanks 2", "icon": "icon/awesometanks2.png", "url": "$FLASH/awesometanks2.swf" },
-    { "name": "Slowroads", "icon": "icon/slowroads.png", "url": "games/slowroads/" },
-    { "name": "AdVenture Capitalist", "icon": "icon/adventurecapitalist.png", "url": "games/adventurecapitalist/" },
-    { "name": "Undertale", "icon": "icon/undertale.png", "url": "games/undertale/" },
-    { "name": "Undertale Yellow", "icon": "icon/undertaleyellow.png", "url": "games/undertale/yellow.html" },
-    { "name": "Deltarune", "icon": "icon/deltarune.png", "url": "games/deltarune/" },
-{ "name": "Henry Stickmin: Breaking The Bank", "icon": "icon/henrybreaking.png", "url": "$FLASH/breakingthebank.swf" },
-{ "name": "Henry Stickmin: Escaping The Prison", "icon": "icon/henryescaping.png", "url": "$FLASH/escapingtheprison.swf" },
-{ "name": "Henry Stickmin: Fleeing The Complex", "icon": "icon/henryfleeing.png", "url": "$FLASH/fleeingthecomplex.swf" },
-{ "name": "Henry Stickmin: Infiltrating The Airship", "icon": "icon/henryairship.png", "url": "$FLASH/infiltratingtheairship.swf" },
-{ "name": "Henry Stickmin: Stealing The Diamond", "icon": "icon/henrystealing.png", "url": "$FLASH/stealingthediamond.swf" },
-
-{ "name": "Friday Night Funkin: Megapack", "icon": "icon/fridaynightfunkinmegapack.png", "url": "https://realdunkin.github.io/fnfmegapack-html5-test/" },
-
-    { "name": "Eagle Ride 3D", "icon": "icon/eagleride3d.png", "url": "https://cedarisasigma.github.io/eag/" },
-{ "name": "Eggy Car", "icon": "icon/eggycar.png", "url": "games/eggycar/" },
-
-    { "name": "Don't Shoot The Puppy", "icon": "icon/dontshootthepuppy.png", "url": "$FLASH/dontshoothtepuppy.swf" },
-{ "name": "Drive Mad", "icon": "icon/drivemad.png", "url": "https://eminence5070.github.io/games/drivemad/" },
-{ "name": "Duck Hunt", "icon": "icon/duckhunt.png", "url": "https://mmankar35.github.io/PAI-Games/games/duck-hunt/index.html" },
-{ "name": "Duck Life", "icon": "icon/ducklife.png", "url": "$FLASH/ducklife.swf" },
-{ "name": "Duck Life 2", "icon": "icon/ducklife2.png", "url": "$FLASH/ducklife2.swf" },
-{ "name": "Duck Life 3", "icon": "icon/ducklife3.png", "url": "$FLASH/ducklife3.swf" },
-{ "name": "Duck Life 4", "icon": "icon/ducklife4.png", "url": "$FLASH/ducklife4.swf" },
-{ "name": "Duck Life 5", "icon": "icon/ducklife5.png", "url": "$FLASH/ducklife5.swf" },
+    {
+      "name": "Wordle",
+      "icon": "icon/wordle.png",
+      "url": "https://bosorioo.github.io/wordle-unlimited/"
+    },
+    {
+      "name": "Retro Bowl",
+      "icon": "icon/retrobowl.png",
+      "url": "games/retrobowl/"
+    },
+    {
+      "name": "Cookie Clicker",
+      "icon": "icon/cookieclicker.png",
+      "url": "games/cookieclicker/"
+    },
+    {
+      "name": "Crazy Cars",
+      "icon": "icon/crazycars.png",
+      "url": "games/crazycars/"
+    },
+    {
+      "name": "Monkey Mart",
+      "icon": "icon/monkeymart.png",
+      "url": "games/monkeymart/"
+    },
+    {
+      "name": "Crazy Cattle 3D",
+      "icon": "icon/crazycattle3d.png",
+      "url": "games/crazycattle3d/"
+    },
+    {
+      "name": "Chess",
+      "icon": "icon/chess.png",
+      "url": "games/chess/"
+    },
+    {
+      "name": "Celeste PICO",
+      "icon": "icon/celestepico.png",
+      "url": "games/celestepico/"
+    },
+    {
+      "name": "Block Blast",
+      "icon": "icon/blockblast.png",
+      "url": "games/blockblast/"
+    },
+    {
+      "name": "Ages of Conflict",
+      "icon": "icon/agesofconflict.png",
+      "url": "games/agesofconflict/"
+    },
+    {
+      "name": "Awesome Tanks 2",
+      "icon": "icon/awesometanks2.png",
+      "url": "$FLASH/awesometanks2.swf"
+    },
+    {
+      "name": "Slowroads",
+      "icon": "icon/slowroads.png",
+      "url": "games/slowroads/"
+    },
+    {
+      "name": "AdVenture Capitalist",
+      "icon": "icon/adventurecapitalist.png",
+      "url": "games/adventurecapitalist/"
+    },
+    {
+      "name": "Undertale",
+      "icon": "icon/undertale.png",
+      "url": "games/undertale/"
+    },
+    {
+      "name": "Undertale Yellow",
+      "icon": "icon/undertaleyellow.png",
+      "url": "games/undertale/yellow.html"
+    },
+    {
+      "name": "Deltarune",
+      "icon": "icon/deltarune.png",
+      "url": "games/deltarune/"
+    },
+    {
+      "name": "Henry Stickmin: Breaking The Bank",
+      "icon": "icon/henrybreaking.png",
+      "url": "$FLASH/breakingthebank.swf"
+    },
+    {
+      "name": "Henry Stickmin: Escaping The Prison",
+      "icon": "icon/henryescaping.png",
+      "url": "$FLASH/escapingtheprison.swf"
+    },
+    {
+      "name": "Henry Stickmin: Fleeing The Complex",
+      "icon": "icon/henryfleeing.png",
+      "url": "$FLASH/fleeingthecomplex.swf"
+    },
+    {
+      "name": "Henry Stickmin: Infiltrating The Airship",
+      "icon": "icon/henryairship.png",
+      "url": "$FLASH/infiltratingtheairship.swf"
+    },
+    {
+      "name": "Henry Stickmin: Stealing The Diamond",
+      "icon": "icon/henrystealing.png",
+      "url": "$FLASH/stealingthediamond.swf"
+    },
+    {
+      "name": "Friday Night Funkin: Megapack",
+      "icon": "icon/fridaynightfunkinmegapack.png",
+      "url": "https://realdunkin.github.io/fnfmegapack-html5-test/"
+    },
+    {
+      "name": "Eagle Ride 3D",
+      "icon": "icon/eagleride3d.png",
+      "url": "https://cedarisasigma.github.io/eag/"
+    },
+    {
+      "name": "Eggy Car",
+      "icon": "icon/eggycar.png",
+      "url": "games/eggycar/"
+    },
+    {
+      "name": "Don't Shoot The Puppy",
+      "icon": "icon/dontshootthepuppy.png",
+      "url": "$FLASH/dontshoothtepuppy.swf"
+    },
+    {
+      "name": "Drive Mad",
+      "icon": "icon/drivemad.png",
+      "url": "https://eminence5070.github.io/games/drivemad/"
+    },
+    {
+      "name": "Duck Hunt",
+      "icon": "icon/duckhunt.png",
+      "url": "https://mmankar35.github.io/PAI-Games/games/duck-hunt/index.html"
+    },
+    {
+      "name": "Duck Life",
+      "icon": "icon/ducklife.png",
+      "url": "$FLASH/ducklife.swf"
+    },
+    {
+      "name": "Duck Life 2",
+      "icon": "icon/ducklife2.png",
+      "url": "$FLASH/ducklife2.swf"
+    },
+    {
+      "name": "Duck Life 3",
+      "icon": "icon/ducklife3.png",
+      "url": "$FLASH/ducklife3.swf"
+    },
+    {
+      "name": "Duck Life 4",
+      "icon": "icon/ducklife4.png",
+      "url": "$FLASH/ducklife4.swf"
+    },
+    {
+      "name": "Duck Life 5",
+      "icon": "icon/ducklife5.png",
+      "url": "$FLASH/ducklife5.swf"
+    },
     {
       "name": "Crossy Road",
       "icon": "icon/crossyroad.png",
