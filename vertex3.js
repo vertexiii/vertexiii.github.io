@@ -4,18 +4,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     iframe.style.cssText = "position:fixed;inset:0;width:100%;height:100%;border:0";
     document.body.appendChild(iframe);
   
-    function injectBase(html, baseHref) {
-      const baseTag = `<base href="${baseHref}">`;
+    function injectBase(html, href) {
+      const baseTag = `<base href="${href}">`;
       const metaUtf8 = '<meta charset="utf-8">';
       const metaViewport = '<meta name="viewport" content="width=device-width, initial-scale=1">';
-      let injected = false;
+      let is_injected = false;
   
       html = html.replace(/<head(\b[^>]*)>/i, match => {
-        injected = true;
+        is_injected = true;
         return match + metaUtf8 + metaViewport + baseTag;
       });
   
-      if (!injected) {
+      if (!is_injected) {
         html = `<head>${metaUtf8}${metaViewport}${baseTag}</head>` + html;
       }
   
@@ -30,10 +30,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (!res.ok) throw new Error("HTTP " + res.status);
       const html = await res.text();
       iframe.srcdoc = injectBase(html, TARGET);
-    } catch (err) {
-      console.warn("CORS blocked, falling back to iframe src", err);
-      iframe.removeAttribute("srcdoc");
-      iframe.src = TARGET;
-    }
+    } catch (_) {}
   });
   

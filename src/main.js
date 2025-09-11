@@ -60,19 +60,16 @@
                 const card = document.createElement('div');
                 card.className = 'game-card';
     
-                // Create the title element
                 const title = document.createElement('h3');
                 title.textContent = game.name;
     
-                // Gradually decrease font size for long titles
-                let fontSize = "1.7em"; // default font size in px
+                let fontSize = "1.7em";
                 const maxLength = 28;
                 if (game.name.length > maxLength) {
                     fontSize = Math.max(10, 16 - (game.name.length - maxLength) * 0.5);
                 }
                 title.style.fontSize = fontSize + 'px';
     
-                // Add icon and title to card
                 card.innerHTML = `<img src="${game.icon}" alt="${game.name}">`;
                 card.appendChild(title);
     
