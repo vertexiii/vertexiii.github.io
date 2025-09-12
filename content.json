@@ -1,6 +1,116 @@
 {
   "games": [
     {
+      "name": "Hex Empire",
+      "icon": "icon/hexempire.png",
+      "url": "$FLASH/hexempire.swf"
+    }, 
+    {
+      "name": "Grand Roulette",
+      "icon": "icon/grandroulette.png",
+      "url": "$FLASH/grandroulette.swf"
+    }, 
+    {
+      "name": "Mortal Kombat: Karnage",
+      "icon": "icon/mortalkombatkarnage.png",
+      "url": "$FLASH/mortalkombatkarnage.swf"
+    }, 
+    {
+      "name": "Learn 2 Fly",
+      "icon": "icon/learn2fly.png",
+      "url": "$FLASH/learn2fly.swf"
+    }, 
+    {
+      "name": "Jack Smith",
+      "icon": "icon/jacksmith.png",
+      "url": "$FLASH/jacksmith.swf"
+    }, 
+    {
+      "name": "MotherLoad",
+      "icon": "icon/motherload.png",
+      "url": "$FLASH/motherload.swf"
+    }, 
+    {
+      "name": "Poker",
+      "icon": "icon/poker.png",
+      "url": "$FLASH/poker.swf"
+    }, 
+    {
+      "name": "Plazma Burst 2",
+      "icon": "icon/plazmaburst2.png",
+      "url": "$FLASH/plazmaburst2.swf"
+    },    
+    {
+      "name": "Sierra 7",
+      "icon": "icon/sierra7.png",
+      "url": "$FLASH/sierra7.swf"
+    },
+    {
+      "name": "Run 3",
+      "icon": "icon/run3.png",
+      "url": "$FLASH/run3.swf"
+    },    
+    {
+      "name": "Storm the House",
+      "icon": "icon/stormthehouse.png",
+      "url": "$FLASH/stormthehouse.swf"
+    },
+    {
+      "name": "Storm the House 2",
+      "icon": "icon/stormthehouse2.png",
+      "url": "$FLASH/stormthehouse2.swf"
+    },    
+    {
+      "name": "Strike Force Heroes 2",
+      "icon": "icon/strikeforceheroes2.png",
+      "url": "$FLASH/strikeforceheroes2.swf"
+    },    
+    {
+      "name": "Strike Force Heroes 3",
+      "icon": "icon/strikeforceheroes3.png",
+      "url": "$FLASH/strikeforceheroes3.swf"
+    },    
+    {
+      "name": "Super Mario Flash 2",
+      "icon": "icon/supermarioflash2.png",
+      "url": "$FLASH/supermarioflash2.swf"
+    },    
+    {
+      "name": "Swords and Sandals",
+      "icon": "icon/swordsandsandals.png",
+      "url": "$FLASH/swordsandsandals.swf"
+    },
+    {
+      "name": "Swords and Sandals II",
+      "icon": "icon/swordsandsandals2.png",
+      "url": "$FLASH/swordsandsandals2.swf"
+    },    
+    {
+      "name": "Swords and Sandals: Crusader",
+      "icon": "icon/swordsandsandalscrusader.png",
+      "url": "$FLASH/swordsandsandalscrusader.swf"
+    },
+    {
+      "name": "Swords and Souls",
+      "icon": "icon/swordsandsouls.png",
+      "url": "$FLASH/swordsandsouls.swf"
+    },    
+    {
+      "name": "The Impossible Quiz 2",
+      "icon": "icon/theimpossiblequiz2.png",
+      "url": "$FLASH/theimpossiblequiz2.swf"
+    },
+    {
+      "name": "Unfair Mario",
+      "icon": "icon/unfairmario.png",
+      "url": "$FLASH/unfairmario.swf"
+    },
+    {
+      "name": "Vector TD",
+      "icon": "icon/vectortd.png",
+      "url": "$FLASH/vectortd.swf"
+    },
+    {
       "name": "Melon Playground",
       "icon": "icon/melonplayground.png",
       "url": "games/melonplayground/"
@@ -9,12 +119,7 @@
       "name": "Zombotron 2",
       "icon": "icon/zombotron2.png",
       "url": "$FLASH/zombotron2.swf"
-    },
-    {
-      "name": "Zombotron",
-      "icon": "icon/zombotron.png",
-      "url": "$FLASH/zombotron.swf"
-    },
+    },  
     {
       "name": "The Final Earth 2",
       "icon": "icon/thefinalearth2.png",
