@@ -1,6 +1,21 @@
 {
   "games": [
     {
+      "name": "Melon Playground",
+      "icon": "icon/melonplayground.png",
+      "url": "games/melonplayground/"
+    },
+    {
+      "name": "Zombotron 2",
+      "icon": "icon/zombotron2.png",
+      "url": "$FLASH/zombotron2.swf"
+    },
+    {
+      "name": "Zombotron",
+      "icon": "icon/zombotron.png",
+      "url": "$FLASH/zombotron.swf"
+    },
+    {
       "name": "The Final Earth 2",
       "icon": "icon/thefinalearth2.png",
       "url": "games/thefinalearth2/"
@@ -236,7 +251,7 @@
       "url": "$FLASH/bloonspop3.swf"
     },
     {
-      "name": "Bloons TD 1",
+      "name": "Bloons TD",
       "icon": "icon/bloonstd1.png",
       "url": "$FLASH/btd1.swf"
     },
