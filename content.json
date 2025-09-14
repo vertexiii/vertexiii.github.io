@@ -1,6 +1,16 @@
 {
   "games": [
     {
+      "name": "Flappy Bird",
+      "icon": "icon/flappybird.png",
+      "url": "games/flappybird/"
+    },
+    {
+      "name": "Tube Jumpers",
+      "icon": "icon/tubejumpers.png",
+      "url": "games/tubejumpers/"
+    },
+    {
       "name": "Hex Empire",
       "icon": "icon/hexempire.png",
       "url": "$FLASH/hexempire.swf"

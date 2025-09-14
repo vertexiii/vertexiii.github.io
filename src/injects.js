@@ -30,6 +30,10 @@ window.CSS_overrides = {
             width: 100vw !important;
             height: 100vh !important;
         }`,
+    "games/tubejumpers/": `
+        body {
+            overflow: hidden;
+        }`,
 };
 
 window.JavaScript_overrides = {
