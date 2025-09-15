@@ -1,6 +1,191 @@
 {
   "games": [
     {
+      "name": "Tag",
+      "icon": "icon/tag.png",
+      "url": "games/tag/"
+    },
+    {
+      "name": "Vex X3M 2",
+      "icon": "icon/vexx3m2.png",
+      "url": "games/vexx3m2/"
+    },
+    {
+      "name": "Vex X3M",
+      "icon": "icon/vexx3m.png",
+      "url": "games/vexx3m/"
+    },
+    {
+      "name": "Vex Challenges",
+      "icon": "icon/vexchallenges.png",
+      "url": "games/vexchallenges/"
+    },
+    {
+      "name": "Vex 8",
+      "icon": "icon/vex8.png",
+      "url": "games/vex8/"
+    },
+    {
+      "name": "Vex 7",
+      "icon": "icon/vex7.png",
+      "url": "games/vex7/"
+    },
+    {
+      "name": "Vex 6",
+      "icon": "icon/vex6.png",
+      "url": "games/vex6/"
+    },
+    {
+      "name": "Vex 5",
+      "icon": "icon/vex5.png",
+      "url": "games/vex5/"
+    },
+    {
+      "name": "Vex 4",
+      "icon": "icon/vex4.png",
+      "url": "games/vex4/"
+    },
+    {
+      "name": "Vex 3 XMAS",
+      "icon": "icon/vex3xmas.png",
+      "url": "games/vex3xmas/"
+    },
+    {
+      "name": "Vex 3",
+      "icon": "icon/vex3.png",
+      "url": "$FLASH/vex3.swf"
+    },
+    {
+      "name": "Vex 2",
+      "icon": "icon/vex2.png",
+      "url": "$FLASH/vex2.swf"
+    },
+    {
+      "name": "Vex 1",
+      "icon": "icon/vex1.png",
+      "url": "$FLASH/vex1.swf"
+    },
+    {
+      "name": "Worldle",
+      "icon": "icon/worldle.png",
+      "url": "games/worldle/"
+    },
+    {
+      "name": "You VS 100",
+      "icon": "icon/youvs100.png",
+      "url": "https://cedarisasigma.github.io/youvs100/"
+    },
+    {
+      "name": "Crazy Kitty 3D",
+      "icon": "icon/crazykitty3d.png",
+      "url": "games/crazykitty3d/"
+    },
+    {
+      "name": "Crazy Chicken 3D",
+      "icon": "icon/crazychicken3d.png",
+      "url": "games/crazychicken3d/"
+    },
+    {
+      "name": "Happy Wheels",
+      "icon": "icon/happywheels.png",
+      "url": "$FLASH/happywheels.swf"
+    },
+    {
+      "name": "Pokemon Ruby",
+      "icon": "icon/pokemonruby.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/pokemon-ruby.gba"
+    },    
+    {
+      "name": "Pokemon FireRed: Rocket Edition",
+      "icon": "icon/pokemonfireredrocket.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/firered-rocket-edition.gba"
+    },
+    
+    {
+      "name": "Pokemon FireRed: Randomizer",
+      "icon": "icon/pokemonfireredrandomizer.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/fireredrandomizer.gba"
+    },    
+    {
+      "name": "Pokemon FireRed",
+      "icon": "icon/pokemonfirered.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/pokemonfirered.gba"
+    },
+    {
+      "name": "Pokemon Emerald",
+      "icon": "icon/pokemonemerald.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/pokemonemerald.gba"
+    },
+    
+    {
+      "name": "Pokemon Sapphire",
+      "icon": "icon/pokemonsapphire.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/pokemonsapphire.gba"
+    },
+    
+    {
+      "name": "Street Fighter 2",
+      "icon": "icon/streetfighter2.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/streetfighter2.gba"
+    },
+    
+    {
+      "name": "Super Mario Bros",
+      "icon": "icon/supermariobros.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/supermariobros.gba"
+    },
+    
+    {
+      "name": "Super Mario Kart",
+      "icon": "icon/supermariokart.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/supermariokart.smc"
+    },
+    
+    {
+      "name": "Super Metroid",
+      "icon": "icon/supermetroid.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/supermetroid.sfc"
+    },
+    
+    {
+      "name": "Mario Kart 64",
+      "icon": "icon/mariokart64.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/mariokart64.n64"
+    },
+    
+    {
+      "name": "Mega Man X",
+      "icon": "icon/megamanx.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/megamanx.smc"
+    },
+    
+    {
+      "name": "Mortal Kombat 2",
+      "icon": "icon/mortalkombat2.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/mortalkombat2.smc"
+    },
+    
+    {
+      "name": "New Super Mario Bros",
+      "icon": "icon/newsupermariobros.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/newsupermariobros.nds"
+    },
+    {
+      "name": "Banjo-Tooie",
+      "icon": "icon/banjotooie.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/banjotooie.n64"
+    }, 
+    {
+      "name": "Animal Crossing: Wild World",
+      "icon": "icon/animalcrossingwildworld.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/animalcrossingwildworld.nds"
+    }, 
+    {
+      "name": "Sandtrix",
+      "icon": "icon/sandtrix.png",
+      "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/sandtrix.gba"
+    },    
+    {
       "name": "Flappy Bird",
       "icon": "icon/flappybird.png",
       "url": "games/flappybird/"

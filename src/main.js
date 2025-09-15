@@ -245,6 +245,18 @@
         } else if (url.startsWith("$SRC")) {
             iframe.src = url.replace("$SRC", "");
             iframe.onload = () => Inject(iframe.contentDocument, url);
+        } else if (url.startsWith("$GBA/")) {
+            const romPath = url.replace("$GBA/", ""); 
+            const emulatorUrl = `engine/emulatorjs/index.html`; 
+            // ^ this should point to your EmulatorJS loader page
+        
+            iframe.src = emulatorUrl;
+            iframe.setAttribute("data-url", "launcher#" + romPath);
+
+        
+            iframe.onload = () => {
+                Inject(iframe.contentDocument, url);
+            };
         } else {
             fetch(url)
                 .then(res => res.text())
