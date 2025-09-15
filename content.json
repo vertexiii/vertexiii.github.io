@@ -1,6 +1,16 @@
 {
   "games": [
     {
+      "name": "Edge Surf",
+      "icon": "icon/edgesurf.png",
+      "url": "games/edgesurf/"
+    },
+    {
+      "name": "Tunnel Rush",
+      "icon": "icon/tunnelrush.png",
+      "url": "https://cedarisasigma.github.io/tunnelrush/"
+    },
+    {
       "name": "Tag",
       "icon": "icon/tag.png",
       "url": "games/tag/"
