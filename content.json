@@ -1,6 +1,21 @@
 {
   "games": [
     {
+      "name": "Five Nights At Winston's",
+      "icon": "icon/fnaw.png",
+      "url": "https://eminence5070.github.io/games/fnaw.html"
+    },
+    {
+      "name": "Extreme Smiley Match 4",
+      "icon": "icon/extremesmileymatch4.png",
+      "url": "$FLASH/extremesmileymatch4.swf"
+    },
+    {
+      "name": "Tunnel Rush 2",
+      "icon": "icon/tunnelrush2.png",
+      "url": "https://cedarisasigma.github.io/tunnelrush2/"
+    },
+    {
       "name": "Edge Surf",
       "icon": "icon/edgesurf.png",
       "url": "games/edgesurf/"
