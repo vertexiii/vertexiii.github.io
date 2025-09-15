@@ -2,13 +2,17 @@
     let games = [];
     let currentPage = 1;
     let iframe = null;
-    let currentSort = localStorage.getItem("Vertex3.sort") || 'index';
+    let currentSort = localStorage.getItem("Vertex3.sort");
     const gamesContainer = document.getElementById('games');
     const paginationContainer = document.getElementById('pagination');
     const searchInput = document.getElementById('search');
     const sortSelect = document.getElementById('sort');
     const nav = document.querySelector('nav');
-    sortSelect.value = currentSort;
+    if (!currentSort) {
+        sortSelect.value = "";
+        } else {
+        sortSelect.value = currentSort;
+    }
 
     function getGamesPerPage() {
         const containerWidth = gamesContainer.clientWidth;
@@ -116,19 +120,76 @@
         const sortedGames = getSortedGames();
         const filtered = sortedGames.filter(g => g.name.toLowerCase().includes(searchInput.value.toLowerCase()));
         const perPage = getGamesPerPage();
-        const pageCount = Math.ceil(filtered.length / perPage);
-
-        for (let i = 1; i <= pageCount; i++) {
+        const totalPages = Math.ceil(filtered.length / perPage);
+        const windowSize = 5;
+    
+        const leftTriangle = `<svg viewBox="0 0 10 10"><polygon points="7,0 7,10 0,5"/></svg>`;
+        const rightTriangle = `<svg viewBox="0 0 10 10"><polygon points="3,0 3,10 10,5"/></svg>`;
+    
+        const left = document.createElement('span');
+        left.classList.add('arrow');
+        left.innerHTML = leftTriangle;
+        left.onclick = () => { if(currentPage > 1) { currentPage--; update(); } };
+        paginationContainer.appendChild(left);
+    
+        let startPage, endPage;
+    
+        if(currentPage <= 3) {
+            startPage = 1;
+            endPage = Math.min(windowSize, totalPages);
+        } else if(currentPage >= totalPages - 2) {
+            startPage = Math.max(totalPages - windowSize + 1, 1);
+            endPage = totalPages;
+        } else {
+            startPage = currentPage - 2;
+            endPage = currentPage + 2;
+        }
+    
+        if(startPage > 1) {
+            const first = document.createElement('span');
+            first.textContent = '1';
+            first.onclick = () => { currentPage = 1; update(); };
+            paginationContainer.appendChild(first);
+    
+            if(startPage > 2) {
+                const dots = document.createElement('span');
+                dots.classList.add('ellipsis');
+                dots.textContent = '...';
+                paginationContainer.appendChild(dots);
+            }
+        }
+    
+        for(let i = startPage; i <= endPage; i++) {
             const span = document.createElement('span');
             span.textContent = i;
-            if (i === currentPage) span.classList.add('active');
-            span.onclick = () => {
-                currentPage = i;
-                renderPage(currentPage);
-                renderPagination();
-            };
+            if(i === currentPage) span.classList.add('active');
+            span.onclick = () => { currentPage = i; update(); };
             paginationContainer.appendChild(span);
         }
+    
+        if(endPage < totalPages) {
+            if(endPage < totalPages - 1) {
+                const dots = document.createElement('span');
+                dots.classList.add('ellipsis');
+                dots.textContent = '...';
+                paginationContainer.appendChild(dots);
+            }
+            const last = document.createElement('span');
+            last.textContent = totalPages;
+            last.onclick = () => { currentPage = totalPages; update(); };
+            paginationContainer.appendChild(last);
+        }
+    
+        const right = document.createElement('span');
+        right.classList.add('arrow');
+        right.innerHTML = rightTriangle;
+        right.onclick = () => { if(currentPage < totalPages) { currentPage++; update(); } };
+        paginationContainer.appendChild(right);
+    }
+
+    function update() {
+        renderPage(currentPage);
+        renderPagination();
     }
 
     function refresh() {
@@ -248,12 +309,8 @@
         } else if (url.startsWith("$GBA/")) {
             const romPath = url.replace("$GBA/", ""); 
             const emulatorUrl = `engine/emulatorjs/index.html`; 
-            // ^ this should point to your EmulatorJS loader page
-        
             iframe.src = emulatorUrl;
             iframe.setAttribute("data-url", "launcher#" + romPath);
-
-        
             iframe.onload = () => {
                 Inject(iframe.contentDocument, url);
             };

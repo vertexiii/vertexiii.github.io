@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+}
 
 html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #121212;
+    background: #121212dd;
     color: #fff;
     height: 100%;
 }
@@ -19,28 +23,33 @@ body {
 }
 
 nav {
-    border-bottom: 2px solid #373434;
+    border-top: 1px solid #37343487;
+    border-bottom: 1px solid #37343487;
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     padding: 15px 30px;
-    background: linear-gradient(341deg, black, #0c143742);
+    background: #14214108;
     z-index: 10;
     box-sizing: border-box;
 }
 
 nav img {
-    margin-right: 15px;
+    filter: saturate(1.1);
+    margin-right: 20px;
+    margin-left: -10px;
     height: 48px;
     width: 48px;
 }
 
 nav h1 {
+    cursor: pointer;
     font-family: "Baloo Thambi 2", monospace;
     font-weight: 500;
     font-style: normal;
+    letter-spacing: 0.075em;
     color: rgba(255, 255, 255, 0.839);
     font-size: 1.5em;
     margin: 0;
@@ -50,10 +59,28 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding-top: 100px; /* space for nav */
-    padding-bottom: 70px; /* space for pagination */
+    padding-top: 100px;
+    padding-bottom: 70px;
     box-sizing: border-box;
     overflow:hidden;
+}
+
+#sort {
+    margin-left: -8px;
+    padding-right: 20px;
+    border-radius: 40px;
+    font-family: 'Baloo Thambi 2';
+    background: #1e1e1e;
+    padding-inline-start: 11px;
+    border: 1px solid #37343421;
+    color: #ffffffd3;
+    font-size: 1em;
+    outline: none;
+}
+
+#sort option:hover {
+    background: #797ca836 !important;
+    appearance: none;
 }
 
 .search-bar {
@@ -64,29 +91,31 @@ main {
     align-items: center;
     background: #1e1e1e;
     padding: 10px 15px;
-    border-radius: 10px;
+    border-radius: 40px;
+    border: 1px solid #37343421;
     box-sizing: border-box;
 }
 
 .search-bar input {
     flex: 1;
+    font-family: 'Baloo Thambi 2';
     background: transparent;
+    padding-inline-start: 11px;
     border: none;
-    color: #fff;
+    color: #ffffffd3;
     font-size: 1em;
     outline: none;
 }
 
 .search-bar i {
-    color: #ccc;
+    color: #cccccc9a;
     font-size: 1.2em;
-    margin-left: 10px;
-    cursor: pointer;
     transition: color 0.2s;
 }
 
-.search-bar i:hover {
-    color: #6200ea;
+.search-bar input::placeholder {
+    font-family: 'Baloo Thambi 2';
+    font-weight: 450;
 }
 
 .games-container {
@@ -104,19 +133,19 @@ main {
     flex-direction: column;
     gap: 20px;
     padding: 10px;
-  }
+}
   
-  .game-row {
+.game-row {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
     align-items: flex-start;
-  }
+}
   
-  .game-card {
+.game-card {
     width: 180px;
     box-sizing: border-box;
-  }
+}
   
 
 .game-card {
@@ -149,14 +178,16 @@ main {
     font-family: "Inter", sans-serif;
     font-weight: 600;
     padding: 5px;
-    margin: 10px 0;
+    margin: 0;
     width: 95%;
     font-size: 1.1em;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex: 1;
 }
 
-/* Hover effect */
 .game-card:hover {
     transform: translateY(-5px) scale(1.005) !important;
     box-shadow: 0 8px 25px rgba(0,0,0,0.7);
@@ -166,32 +197,65 @@ main {
     transform: scale(1.05);
 }
 
-
-
 .pagination {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:16px;
+    user-select:none;
+    background:#1e1e1e;
+    border: 1px solid #37343421;
+    padding:10px 20px;
+    border-radius:50px;
+    width:40vw;
+    gap: 18px;
+    box-sizing:border-box;
+    height: fit-content;
     position: fixed;
     bottom: 10px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 10;
-    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 .pagination span {
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 50px;
-    background: #1e1e1e;
-    cursor: pointer;
-    transition: background 0.2s;
+    width:30px;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    box-sizing: border-box;
+    border-radius: 1px;
 }
 
-.pagination span.active,
-.pagination span:hover {
-    background: #6200ea;
+.pagination span:not(.arrow, .ellipsis):hover {
+    color: #eee;
+    cursor: pointer;
+    border-bottom-color: #eee;
+}
+
+.pagination span.active {
+    border-color: #fff;
+    color: #fff;
+}
+
+.pagination span.arrow:hover {
+    color: #bbbbbb;
+    border-bottom-color: transparent;
+}
+
+svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+}
+
+.ellipsis {
+    color: gray;
+    letter-spacing: 0.2em;
 }
 
 @media (max-width: 768px) {
