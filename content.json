@@ -1,6 +1,21 @@
 {
   "games": [
     {
+      "name": "Counter Strike",
+      "icon": "icon/cs.png",
+      "url": "games/cs/"
+    },
+    {
+      "name": "Operius",
+      "icon": "icon/operius.png",
+      "url": "https://bitfexl.github.io/operius/"
+    },
+    {
+      "name": "ULTRAKILL",
+      "icon": "icon/ultrakill.png",
+      "url": "games/ultrakill/"
+    },
+    {
       "name": "Five Nights At Winston's",
       "icon": "icon/fnaw.png",
       "url": "https://eminence5070.github.io/games/fnaw.html"
