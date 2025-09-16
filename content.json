@@ -1,6 +1,26 @@
 {
   "games": [
     {
+      "name": "Papa's Wingeria",
+      "icon": "icon/papaswingeria.png",
+      "url": "$FLASH/papaswingeria.swf"
+    },
+    {
+      "name": "Papa's Donuteria",
+      "icon": "icon/papasdonuteria.png",
+      "url": "$FLASH/papasdonuteria.swf"
+    },
+    {
+      "name": "Papa's Taco Mia",
+      "icon": "icon/papastacomia.png",
+      "url": "$FLASH/papastacomia.swf"
+    },
+    {
+      "name": "Papa's Bakeria",
+      "icon": "icon/papasbakeria.png",
+      "url": "$FLASH/papasbakeria.swf"
+    },
+    {
       "name": "Counter Strike",
       "icon": "icon/counterstrike.png",
       "url": "games/cs/"
