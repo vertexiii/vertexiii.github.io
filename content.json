@@ -2,7 +2,7 @@
   "games": [
     {
       "name": "Counter Strike",
-      "icon": "icon/cs.png",
+      "icon": "icon/counterstrike.png",
       "url": "games/cs/"
     },
     {
