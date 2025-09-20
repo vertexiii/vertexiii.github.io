@@ -1,6 +1,42 @@
 {
   "games": [
     {
+      "name": "4x4",
+      "icon": "icon/4x4.png",
+      "url": "games/4x4/",
+      "new": "true"
+    },
+    {
+      "name": "Moto X3M",
+      "icon": "icon/motox3m.png",
+      "url": "https://motox3munblocked.github.io/",
+      "new": "true"
+    },
+    {
+      "name": "Moto X3M Spooky",
+      "icon": "icon/motox3mspooky.png",
+      "url": "games/motox3mspooky/",
+      "new": "true"
+    },
+    {
+      "name": "Moto X3M Pool Party",
+      "icon": "icon/motox3mpoolparty.png",
+      "url": "games/motox3mpoolparty/",
+      "new": "true"
+    },
+    {
+      "name": "Moto X3M 3",
+      "icon": "icon/motox3m3.png",
+      "url": "games/motox3m3/",
+      "new": "true"
+    },
+    {
+      "name": "Moto X3M 2",
+      "icon": "icon/motox3m2.png",
+      "url": "games/motox3m2/",
+      "new": "true"
+    },
+    {
       "name": "Papa's Wingeria",
       "icon": "icon/papaswingeria.png",
       "url": "$FLASH/papaswingeria.swf"

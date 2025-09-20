@@ -63,6 +63,9 @@
             rowGames.forEach((game, idx) => {
                 const card = document.createElement('div');
                 card.className = 'game-card';
+                if (game.new == "true") {
+                    card.classList.add("new");
+                }
     
                 const title = document.createElement('h3');
                 title.textContent = game.name;
@@ -75,6 +78,12 @@
                 title.style.fontSize = fontSize + 'px';
     
                 card.innerHTML = `<img src="${game.icon}" alt="${game.name}">`;
+                if (game.new == "true") {
+                    const ribbon = document.createElement("div");
+                    ribbon.textContent = "NEW";
+                    ribbon.className = "ribbon"
+                    card.appendChild(ribbon);
+                }
                 card.appendChild(title);
     
                 card.style.opacity = 0;
@@ -326,6 +335,10 @@
                 });
         }
     }
+    // allow loadgame usage for injects.js
+    window.Vertex3 = window.Vertex3 || {};
+    window.Vertex3.LoadGame = loadGame;
+
 
 
 

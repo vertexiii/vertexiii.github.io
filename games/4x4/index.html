@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <base href="https://4x4.bwhmather.com/">
+  <meta charset="utf-8">
+  <title>Pickup</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <canvas></canvas>
+
+  <div id="pedals">
+    <div id="leftPedal" hidden="hidden"></div>
+    <div id="rightPedal" hidden="hidden"></div>
+  </div>
+
+  <div id="main-menu" class="menu-outer hidden">
+    <div class="menu-inner">
+      <div class="menu-content">
+        <h2>Main Menu</h2>
+        <ul>
+          <li><button autofocus id="play-btn" type="button">Play</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="stats">
+    <dl>
+      <dt>FPS</dt><dd id="fps"></dd>
+      <dt>Step</dt><dd id="step"></dd>
+      <dt>Simulation Time</dt><dd id="simulationTime"></dd>
+      <dt>Draw Time</dt><dd id="drawTime"></dd>
+    </dl>
+  </div>
+
+  <script src="js/bundle.js"></script>
+  <script>
+    var canvas = document.getElementsByTagName('canvas')[0];
+    var app = new pickup.Application(canvas);
+  </script>
+</body>

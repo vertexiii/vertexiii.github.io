@@ -37,5 +37,14 @@ window.CSS_overrides = {
 };
 
 window.JavaScript_overrides = {
-    "game_url": () => { /**/ }
+  // adds 'r' keybind to refresh
+  "games/4x4/": () => {
+      const doc = frameElement.contentDocument;
+      doc.addEventListener("keydown", (e) => {
+          //reloads game
+          if (e.key.toLowerCase() === "r") {
+              window.parent.Vertex3.LoadGame("games/4x4/", "4x4");
+          }
+      });
+  }
 };
