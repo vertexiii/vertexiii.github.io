@@ -30,7 +30,7 @@ self.addEventListener('install', event => {
 
 // adds listener to all network requests
 self.addEventListener('fetch', event => {
-    if (event.request.url.includes('content.json5')) {
+    if (event.request.url.includes('content.json')) {
         event.respondWith(fetch(event.request)); // always fetch fresh content.json
         return;
     } else {

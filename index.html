@@ -11,23 +11,32 @@
         .catch(error => console.error(error));
     }
   </script>    
-  <script>
-    window.tailwindConfig = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#121212dd'
-          }
+
+<!-- Load Tailwind from CDN WITHOUT defer -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Define Tailwind config **before loading Tailwind**
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          darkgrey: '#121212'
         }
       }
-    }
-  </script>
-  <script src="https://cdn.tailwindcss.com" defer></script>
+    },
+    content: [
+      // make sure Tailwind scans your HTML for classes
+      "./**/*.html",
+    ]
+  }
+</script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jsonc-parser@3.3.1/lib/umd/main.js"></script>
+
   <link href="assets/css/style.css" rel="stylesheet" hreflang="en-US" type="text/css" crossorigin="anonymous">
 </head>
 
-<body class="m-0 p-0 font-sans bg-primary text-white h-full ">
+<body class="m-0 p-0 bg-darkgrey text-slate-200 h-full">
   <nav>
     <img src="assets/vertex.png" alt="Vertex 3">
     <h1>Vertex 3</h1>

@@ -3,6 +3,10 @@
     ties everything together
 */
 
+
+// removes comments from JSONC files before parsing (thanks html for not supporting JSONC out of the gate) (maybe in HTML6🙏)
+import * as JSONC from './jsonc.js';
+
 import { renderPage, getGamesPerPage, getSortedGames } from './Page.js';
 import { renderPagination } from './Pagination.js';
 import { loadGame } from './GameLoader.js';
@@ -36,11 +40,22 @@ sortSelect.addEventListener('change', () => {
     refresh();
 });
 
-// Load games
-fetch('content.json5?' + Date.now())
-    .then(res => res.json())
-    .then(data => { games = data.games; refresh(); });
-
+// Load games from JSONC
+fetch('content.jsonc?' + Date.now())
+  .then(res => res.text())
+  .then(text => {
+    const cleanText = JSONC.clean(text);
+    let data;
+    try {
+        data = JSON.parse(cleanText);
+    } catch (err) {
+        console.error('Failed to parse JSONC:', err);
+        return;
+    }
+    games = data.games;
+    refresh();
+  })
+  .catch(err => console.error('Failed to load JSONC:', err));
 
 // Expose global loader
 window.Vertex3 = window.Vertex3 || {};
