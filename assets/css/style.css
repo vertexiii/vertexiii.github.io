@@ -1,0 +1,234 @@
+@import url("pagination.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+nav {
+    border-top: 1px solid #37343487;
+    border-bottom: 1px solid #37343487;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: #14214108;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+nav img {
+    filter: saturate(1.1);
+    margin-right: 20px;
+    margin-left: -10px;
+    height: 48px;
+    width: 48px;
+}
+
+nav h1 {
+    cursor: pointer;
+    font-family: "Baloo Thambi 2", monospace;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.075em;
+    color: rgba(255, 255, 255, 0.839);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+
+#sort {
+    margin-left: -8px;
+    padding-right: 20px;
+    border-radius: 40px;
+    font-family: 'Baloo Thambi 2';
+    background: #1e1e1e;
+    padding-inline-start: 11px;
+    border: 1px solid #37343421;
+    color: #ffffffd3;
+    font-size: 1em;
+    outline: none;
+}
+
+#sort option:hover {
+    background: #797ca836 !important;
+    appearance: none;
+}
+
+.search-bar {
+    margin: 0 1vw 0px 33.3vw;
+    width: 30%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 10px 15px;
+    border-radius: 40px;
+    border: 1px solid #37343421;
+    box-sizing: border-box;
+}
+
+.search-bar input {
+    flex: 1;
+    font-family: 'Baloo Thambi 2';
+    background: transparent;
+    padding-inline-start: 11px;
+    border: none;
+    color: #ffffffd3;
+    font-size: 1em;
+    outline: none;
+}
+
+.search-bar i {
+    color: #cccccc9a;
+    font-size: 1.2em;
+    transition: color 0.2s;
+}
+
+.search-bar input::placeholder {
+    font-family: 'Baloo Thambi 2';
+    font-weight: 450;
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.games-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+  
+.game-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+  
+.game-card {
+    width: 180px;
+    box-sizing: border-box;
+}
+  
+
+.game-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    width: 180px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.ribbon {
+    position: relative;
+    z-index: 0;
+    top: -72.5%;
+    right: -72.5%;
+    background: linear-gradient(90deg, #5295d170, #0e728b51);
+    padding: 4px;
+    backdrop-filter: blur(1px) brightness(0.5);
+    border-radius: 7px;
+    width: fit-content;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-family: 'Baloo Thambi 2';
+    letter-spacing: 0px;
+    aspect-ratio: 2 / 1;
+    font-size: 12px;
+}
+
+.new h3 {
+    margin-top: -14.5% !important; 
+}
+
+.new {
+    background: linear-gradient(90deg, #5295d170, #0e728b51);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.controls {
+    
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.game-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.game-card h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    padding: 5px;
+    margin: 0;
+    width: 95%;
+    font-size: 1.1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.game-card:hover {
+    transform: translateY(-5px) scale(1.005) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+}
+
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 80%;
+    }
+}

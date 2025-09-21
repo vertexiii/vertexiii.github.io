@@ -1,18 +1,38 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Vertex 3 Games</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<link href="style/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vertex 3</title>
+  <script defer>
+    // custom caching system
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('src/sw.js')
+        .catch(error => console.error(error));
+    }
+  </script>    
+  <script>
+    window.tailwindConfig = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#121212dd'
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet" hreflang="en-US" type="text/css" crossorigin="anonymous">
 </head>
-<body>
+
+<body class="m-0 p-0 font-sans bg-primary text-white h-full ">
   <nav>
-    <img src="vertex.png" alt="Vertex 3 Logo">
+    <img src="assets/vertex.png" alt="Vertex 3">
     <h1>Vertex 3</h1>
   </nav>
-  
+
   <main>
     <div class="controls">
       <div class="search-bar">
@@ -25,13 +45,13 @@
         <option value="alphabet">Title (A–Z)</option>
         <option value="launches">Most Played</option>
       </select>
-      
-    </div>    
-  
+
+    </div>
+
     <div class="games-container" id="games"></div>
     <div class="pagination" id="pagination"></div>
   </main>
-  <script src="src/main.js"></script>
-  </body>
-  
+  <script src="src/main.js" type="module" defer></script>
+</body>
+
 </html>

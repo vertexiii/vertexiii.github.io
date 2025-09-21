@@ -46,5 +46,17 @@ window.JavaScript_overrides = {
               window.parent.Vertex3.LoadGame("games/4x4/", "4x4");
           }
       });
+  },
+  // makes canvas support resizing
+  "games/superhot/": () => {
+    const canvas = document.getElementById("canvas");
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvas.style.width = "100vw";
+      canvas.style.height = "100vh";
+    }
+    resizeCanvas();
+    setInterval(resizeCanvas, 1000);
   }
 };
