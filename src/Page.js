@@ -38,6 +38,7 @@ export function getSortedGames(games, currentSort) {
 // creates page elements
 export function renderPage(gamesContainer, games, currentSort, searchInput, loadGame, currentPage, perPage) {
     gamesContainer.innerHTML = '';
+    const nav = document.querySelector('nav');
 
     const sortedGames = getSortedGames(games, currentSort);
     const filtered = sortedGames.filter(g => g.name.toLowerCase().includes(searchInput.value.toLowerCase()));
@@ -103,7 +104,7 @@ export function renderPage(gamesContainer, games, currentSort, searchInput, load
             card.style.opacity = 0;
             // add hover effect
             card.style.transform = 'translateY(20px)';
-            card.onclick = () => loadGame(game.url, game.name);
+            card.onclick = () => loadGame(game.url, game.name, nav);
             rowDiv.appendChild(card);
 
             // add pop-in effect

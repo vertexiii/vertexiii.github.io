@@ -59,4 +59,4 @@ fetch('content.jsonc?' + Date.now())
 
 // Expose global loader
 window.Vertex3 = window.Vertex3 || {};
-window.Vertex3.LoadGame = (url, gameName) => loadGame(url, gameName, nav);
+window.Vertex3.LoadGame = (url, gameName, nav) => loadGame(url, gameName, nav);
