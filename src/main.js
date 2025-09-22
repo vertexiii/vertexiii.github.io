@@ -20,9 +20,9 @@ const searchInput = document.getElementById('search');
 const sortSelect = document.getElementById('sort');
 
 const nav = document.querySelector('nav');
-nav.addEventListener('onclick', () => {
-    deleteFrame()
-})
+[...nav.children].forEach(elem =>
+    elem.addEventListener('click', () => deleteFrame())
+);
 
 if (!currentSort) sortSelect.value = "";
 else sortSelect.value = currentSort;
