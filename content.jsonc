@@ -6,6 +6,18 @@
 {
   "games": [
     {
+      "name": "ONE BTN BOSSES",
+      "icon": "icon/onebtnbosses.png",
+      "url": "games/onebtnbosses/",
+      "new": "true"
+    },
+    {
+      "name": "PolyTrack",
+      "icon": "icon/polytrack.png",
+      "url": "games/polytrack/",
+      "new": "true"
+    },
+    {
       "name": "COLORMUSE",
       "icon": "icon/colormuse.png",
       "url": "games/colormuse/",
