@@ -38,6 +38,7 @@ export function loadGame(url, gameName, nav) {
             zIndex: '9999',
             backgroundColor: 'white'
         });
+        iframe.setAttributeNS(null, 'allow', 'autoplay; fullscreen *; cross-origin-isolated');
         document.body.appendChild(iframe);
     } else {
         iframe.remove();

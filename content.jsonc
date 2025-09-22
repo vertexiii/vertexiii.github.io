@@ -6,6 +6,12 @@
 {
   "games": [
     {
+      "name": "COLORMUSE",
+      "icon": "icon/colormuse.png",
+      "url": "games/colormuse/",
+      "new": "true"
+    },
+    {
       "name": "Kill The Ice Age Baby",
       "icon": "icon/killtheiceagebaby.png",
       "url": "games/killtheiceagebaby/",
