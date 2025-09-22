@@ -6,6 +6,18 @@
 {
   "games": [
     {
+      "name": "My Femboy Roomate",
+      "icon": "icon/myfemboyroomate.png",
+      "url": "games/myfemboyroomate/",
+      "new": "true"
+    },
+    {
+      "name": "Super Mario 64",
+      "icon": "icon/supermario64.png",
+      "url": "$GBA/https://bonviniv.github.io/nintendo64/Super%20Mario%2064/Super%20Mario%2064%20(USA).z64",
+      "new": "true"
+    },
+    {
       "name": "Pokemon Ash Gray",
       "icon": "icon/pokemonashgray.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/AshGray.zip",
@@ -135,12 +147,6 @@
       "name": "Kill The Ice Age Baby",
       "icon": "icon/killtheiceagebaby.png",
       "url": "games/killtheiceagebaby/",
-      "new": "true"
-    },
-    {
-      "name": "My Femboy Roomate",
-      "icon": "icon/myfemboyroomate.png",
-      "url": "games/myfemboyroomate/",
       "new": "true"
     },
     {
