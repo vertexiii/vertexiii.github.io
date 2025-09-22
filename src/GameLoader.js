@@ -5,6 +5,13 @@
     to the response
 */
 
+
+// deletes game iframe
+export function deleteFrame() {
+    let iframe = document.getElementById('vertex-iframe');
+    iframe.remove();
+}
+
 export function loadGame(url, gameName, nav) {
     // update times a game has been launched
     const launches = JSON.parse(localStorage.getItem("Vertex3.launches") || "{}");

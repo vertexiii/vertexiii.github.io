@@ -9,7 +9,7 @@ import * as JSONC from './jsonc.js';
 
 import { renderPage, getGamesPerPage, getSortedGames } from './Page.js';
 import { renderPagination } from './Pagination.js';
-import { loadGame } from './GameLoader.js';
+import { loadGame, deleteFrame } from './GameLoader.js';
 
 let games = [];
 let currentPage = 1;
@@ -18,7 +18,11 @@ const gamesContainer = document.getElementById('games');
 const paginationContainer = document.getElementById('pagination');
 const searchInput = document.getElementById('search');
 const sortSelect = document.getElementById('sort');
+
 const nav = document.querySelector('nav');
+nav.addEventListener('onclick', () => {
+    deleteFrame()
+})
 
 if (!currentSort) sortSelect.value = "";
 else sortSelect.value = currentSort;
