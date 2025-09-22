@@ -6,7 +6,19 @@
 {
   "games": [
     {
-      "name": "Mario VS Donkey Kong 2: March of the Minis",
+      "name": "Naruto Shippuden: Ninja Council 4",
+      "icon": "icon/ninjacouncil4.png",
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/NC4.zip",
+      "new": "true"
+    },
+    {
+      "name": "Naruto Shippuden: Shinobi Rumble",
+      "icon": "icon/narutoshinobirumble.png",
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/NCSR.zip",
+      "new": "true"
+    },    
+    {
+      "name": "Mario VS Donkey Kong 2",
       "icon": "icon/mariovsdonkeykong2.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/MVDK2.zip",
       "new": "true"
@@ -875,7 +887,7 @@
       "url": "$FLASH/papasfreezeria.swf"
     },
     {
-      "name": "Eaglercraft 1.12.2",
+      "name": "Minecraft 1.12.2",
       "icon": "icon/eaglercraft1.12.png",
       "url": "games/eaglercraft1.12/"
     }
