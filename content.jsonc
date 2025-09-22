@@ -6,6 +6,12 @@
 {
   "games": [
     {
+      "name": "My Femboy Roomate",
+      "icon": "icon/myfemboyroomate.png",
+      "url": "games/myfemboyroomate/",
+      "new": "true"
+    },
+    {
       "name": "Auto Necrochess",
       "icon": "icon/autonecrochess.png",
       "url": "games/autonecrochess/",
