@@ -6,6 +6,12 @@
 {
   "games": [
     {
+      "name": "Kill The Ice Age Baby",
+      "icon": "icon/killtheiceagebaby.png",
+      "url": "games/killtheiceagebaby/",
+      "new": "true"
+    },
+    {
       "name": "My Femboy Roomate",
       "icon": "icon/myfemboyroomate.png",
       "url": "games/myfemboyroomate/",

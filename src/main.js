@@ -9,7 +9,7 @@ import * as JSONC from './jsonc.js';
 
 import { renderPage, getGamesPerPage, getSortedGames } from './Page.js';
 import { renderPagination } from './Pagination.js';
-import { loadGame, deleteFrame } from './GameLoader.js';
+import { loadGame, deleteFrame, getIframe } from './GameLoader.js';
 
 let games = [];
 let currentPage = 1;
@@ -44,22 +44,41 @@ sortSelect.addEventListener('change', () => {
     refresh();
 });
 
+
+// toggle fullscreen
+function ToggleFullscreen() {
+    const iframe = getIframe();
+    const element = iframe || document.body;
+
+    if (document.fullscreenElement === element) {
+        document.exitFullscreen();
+    } else {
+        element.requestFullscreen();
+        if (iframe) iframe.focus();
+    }
+}
+nav.addEventListener("click", element => {
+    if (element.target === nav) {
+        ToggleFullscreen();
+    }
+});
+
 // Load games from JSONC
 fetch('content.jsonc?' + Date.now())
-  .then(res => res.text())
-  .then(text => {
-    const cleanText = JSONC.clean(text);
-    let data;
-    try {
-        data = JSON.parse(cleanText);
-    } catch (err) {
-        console.error('Failed to parse JSONC:', err);
-        return;
-    }
-    games = data.games;
-    refresh();
-  })
-  .catch(err => console.error('Failed to load JSONC:', err));
+    .then(res => res.text())
+    .then(text => {
+        const cleanText = JSONC.clean(text);
+        let data;
+        try {
+            data = JSON.parse(cleanText);
+        } catch (err) {
+            console.error('Failed to parse JSONC:', err);
+            return;
+        }
+        games = data.games;
+        refresh();
+    })
+    .catch(err => console.error('Failed to load JSONC:', err));
 
 // Expose global loader
 window.Vertex3 = window.Vertex3 || {};

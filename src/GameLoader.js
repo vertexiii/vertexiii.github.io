@@ -6,10 +6,15 @@
 */
 
 
+// returns game frame
+export function getIframe() {
+    let iframe = document.getElementById('vertex-iframe');
+    return iframe 
+}
+
 // deletes game iframe
 export function deleteFrame() {
-    let iframe = document.getElementById('vertex-iframe');
-    iframe.remove();
+    getIframe().remove();
 }
 
 export function loadGame(url, gameName, nav) {
@@ -18,7 +23,8 @@ export function loadGame(url, gameName, nav) {
     launches[gameName] = (launches[gameName] || 0) + 1;
     localStorage.setItem("Vertex3.launches", JSON.stringify(launches));
 
-    let iframe = document.getElementById('vertex-iframe');
+    let iframe = getIframe()
+
     if (!iframe) {
         iframe = document.createElement('iframe');
         iframe.id = 'vertex-iframe';

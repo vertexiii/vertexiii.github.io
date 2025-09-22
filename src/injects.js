@@ -70,4 +70,16 @@ window.JavaScript_overrides = {
     resizeCanvas();
     setInterval(resizeCanvas, 1000);
   }
+  ,
+  "games/killtheiceagebaby/": () => {
+    const canvas = document.getElementById("unityContainer");
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvas.style.width = "100vw";
+      canvas.style.height = "100vh";
+    }
+    resizeCanvas();
+    setInterval(resizeCanvas, 1000);
+  }
 };
