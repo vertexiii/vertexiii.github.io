@@ -41,7 +41,17 @@ export function renderPage(gamesContainer, games, currentSort, searchInput, load
     const nav = document.querySelector('nav');
 
     const sortedGames = getSortedGames(games, currentSort);
-    const filtered = sortedGames.filter(g => g.name.toLowerCase().includes(searchInput.value.toLowerCase()));
+
+    function buildSearchRegex(input) {
+        let pattern = input
+          .replace(/e/g, "[eé]")  // plain e matches e or é
+          .replace(/n/g, "[nñ]"); // plain n matches n or ñ
+        return new RegExp(pattern, "i"); // case-insensitive
+      }
+    const regex = buildSearchRegex(searchInput.value);
+    const filtered = sortedGames.filter(g => regex.test(g.name));
+      
+      
     const pageGames = filtered.slice((currentPage - 1) * perPage, (currentPage - 1) * perPage + perPage);
 
     const cardWidth = 180;

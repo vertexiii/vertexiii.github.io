@@ -6,6 +6,18 @@
 {
   "games": [
     {
+      "name": "Legend of Zelda: A Link To The Past",
+      "icon": "icon/lozpast.png",
+      "url": "$GBA/https://skere33.github.io/miemuladorWeb/binaries/roms/zelda_past.gba",
+      "new": "true"
+    },
+    {
+      "name": "Legend of Zelda: The Minish Cap",
+      "icon": "icon/lozminishcap.png",
+      "url": "$GBA/https://skere33.github.io/miemuladorWeb/binaries/roms/zelda_minish.gba",
+      "new": "true"
+    },
+    {
       "name": "My Femboy Roomate",
       "icon": "icon/myfemboyroomate.png",
       "url": "games/myfemboyroomate/",
@@ -18,85 +30,85 @@
       "new": "true"
     },
     {
-      "name": "Pokemon Ash Gray",
+      "name": "Pokémon Ash Gray",
       "icon": "icon/pokemonashgray.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/AshGray.zip",
       "new": "true"
     },
     {
-      "name": "Pokemon Cloud White",
+      "name": "Pokémon Cloud White",
       "icon": "icon/pokemoncloudwhite.png",
       "url": "$GBA/https://superstarlex.github.io/Bellatrixgaming/Binaries/pokemonwhite.zip",
       "new": "true"
     },
     {
-      "name": "Pokemon Dark Violet",
+      "name": "Pokémon Dark Violet",
       "icon": "icon/pokemondarkviolet.png",
       "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-dark-violet.gba",
       "new": "true"
     },
     {
-      "name": "Pokemon Elite Redux",
+      "name": "Pokémon Elite Redux",
       "icon": "icon/pokemoneliteredux.png",
       "url": "$GBA/https://download2348.mediafire.com/p2kup3bxh2agC9dowDbNaJF3p6ZW-ImxQ-nc-bqG6aui_MOFeJWWaDFamb5MqHY7Ld1djRxNOn7MHMEOO0KB9lrPaiW3xS5R6SD2KXxHThxTScGnuQkgO8PEgKfgmra5bnc4w6eQAbc5xgMnlMcZyzSa9KdD1DZVlpnvYS65Ng/mybggttbnt8139l/elite+redux+v2.5%282%29.zip",
       "new": "true"
     },
     {
-      "name": "Pokemon Emerald Imperium",
+      "name": "Pokémon Emerald Imperium",
       "icon": "icon/pokemonemeraldimperium.png",
       "url": "$GBA/https://download2337.mediafire.com/hl37lyvld4ogmgnkdK1G2L5Fd7gfnfUapdaOQYiRXJQ035KuAngqpcTJQeIk5M8K2-virhbXxDeMYQBTW4lccA845n8oPMp5qklvpi9_jbyElpqJXgcpB6o34-tDs3zU0SLbjE4QGxgHHqDoYpNQvmA53crw3Bb8AcNm7Yo83A/48ayfii5xwu6nxj/imperium+v1.2.zip",
       "new": "true"
     },
     {
-      "name": "Pokemon Flora Sky",
+      "name": "Pokémon Flora Sky",
       "icon": "icon/pokemonflorasky.png",
       "url": "$GBA/https://gba.js.org/binaries/pokemonflorasky.gba",
       "new": "true"
     },
     {
-      "name": "Pokemon Glazed",
+      "name": "Pokémon Glazed",
       "icon": "icon/pokemonglazed.png",
       "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-glazed.gba",
       "new": "true"
     },
     {
-      "name": "Pokemon LeafGreen",
+      "name": "Pokémon LeafGreen",
       "icon": "icon/pokemonleafgreen.png",
       "url": "$GBA/https://gba.js.org/binaries/pokemongreen.gba",
       "new": "true"
     },
     {
-      "name": "Pokemon Light Platinum",
+      "name": "Pokémon Light Platinum",
       "icon": "icon/pokemonlightplatinum.png",
       "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-light-platinum.gba",
       "new": "true"
     },
     {
-      "name": "Pokemon Mystery Dungeon: Red Rescue Team",
+      "name": "Pokémon Mystery Dungeon: Red Rescue Team",
       "icon": "icon/pokemonmysterydungeonred.png",
       "url": "$GBA/https://gba.js.org/binaries/mysteryred.gba",
       "new": "true"
     },
     {
-      "name": "Pokemon Saiph",
+      "name": "Pokémon Saiph",
       "icon": "icon/pokemonsaiph.png",
       "url": "$GBA/https://lowkimischeif.github.io/Binaries/Saiph.gba",
       "new": "true"
     },
     {
-      "name": "Pokemon Sun Sky",
+      "name": "Pokémon Sun Sky",
       "icon": "icon/pokemonsunsky.png",
       "url": "$GBA/https://lowkimischeif.github.io/Binaries/SunSky.gba",
       "new": "true"
     },
     {
-      "name": "Pokemon Mega X & Y",
+      "name": "Pokémon Mega X & Y",
       "icon": "icon/pokemonmegaxandy.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/XY.zip",
       "new": "true"
     },
     {
-      "name": "Pokemon Ultra Violet",
+      "name": "Pokémon Ultra Violet",
       "icon": "icon/pokemonultraviolet.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/UltraViolet.zip",
       "new": "true"
@@ -372,34 +384,34 @@
       "url": "$FLASH/happywheels.swf"
     },
     {
-      "name": "Pokemon Ruby",
+      "name": "Pokémon Ruby",
       "icon": "icon/pokemonruby.png",
       "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/pokemon-ruby.gba"
     },    
     {
-      "name": "Pokemon FireRed: Rocket Edition",
+      "name": "Pokémon FireRed: Rocket Edition",
       "icon": "icon/pokemonfireredrocket.png",
       "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/firered-rocket-edition.gba"
     },
     
     {
-      "name": "Pokemon FireRed: Randomizer",
+      "name": "Pokémon FireRed: Randomizer",
       "icon": "icon/pokemonfireredrandomizer.png",
       "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/fireredrandomizer.gba"
     },    
     {
-      "name": "Pokemon FireRed",
+      "name": "Pokémon FireRed",
       "icon": "icon/pokemonfirered.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/pokemonfirered.gba"
     },
     {
-      "name": "Pokemon Emerald",
+      "name": "Pokémon Emerald",
       "icon": "icon/pokemonemerald.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/pokemonemerald.gba"
     },
     
     {
-      "name": "Pokemon Sapphire",
+      "name": "Pokémon Sapphire",
       "icon": "icon/pokemonsapphire.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/pokemonsapphire.gba"
     },
@@ -507,7 +519,7 @@
       "url": "$FLASH/motherload.swf"
     }, 
     {
-      "name": "Poker",
+      "name": "Pokér",
       "icon": "icon/poker.png",
       "url": "$FLASH/poker.swf"
     }, 
