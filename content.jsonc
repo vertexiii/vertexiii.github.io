@@ -6,6 +6,12 @@
 {
   "games": [
     {
+      "name": "Auto Necrochess",
+      "icon": "icon/autonecrochess.png",
+      "url": "games/autonecrochess/",
+      "new": "true"
+    },
+    {
       "name": "Time Shooter",
       "icon": "icon/timeshooter.png",
       "url": "games/timeshooter/",

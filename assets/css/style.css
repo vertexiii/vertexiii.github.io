@@ -8,27 +8,6 @@
     -webkit-user-drag: none;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-}
-
-nav {
-    border-top: 1px solid #37343487;
-    border-bottom: 1px solid #37343487;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    background: #14214108;
-    z-index: 10;
-    box-sizing: border-box;
-}
-
 nav img {
     filter: saturate(1.1);
     margin-right: 20px;

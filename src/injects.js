@@ -58,5 +58,16 @@ window.JavaScript_overrides = {
     }
     resizeCanvas();
     setInterval(resizeCanvas, 1000);
+  },
+  "games/autonecrochess/": () => {
+    const canvas = document.getElementById("canvas");
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvas.style.width = "100vw";
+      canvas.style.height = "100vh";
+    }
+    resizeCanvas();
+    setInterval(resizeCanvas, 1000);
   }
 };
