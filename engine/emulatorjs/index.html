@@ -9,6 +9,7 @@
       type="image/vnd.microsoft.icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
     <style>
       body,
       html {
@@ -16,12 +17,10 @@
         background-color: black;
         color: white;
       }
-
       body {
         margin: 0;
         overflow: hidden;
       }
-
       body,
       #box,
       #top {
@@ -30,7 +29,6 @@
         justify-content: center;
         flex-direction: column;
       }
-
       #box {
         color: #aaa;
         height: 20em;
@@ -49,13 +47,11 @@
         font-size: 20px;
         margin: 5px;
       }
-
       #box:hover,
       #box[drag] {
         border-color: #38f;
         color: #ddd;
       }
-
       #input {
         cursor: pointer;
         position: absolute;
@@ -65,12 +61,10 @@
         height: 100%;
         opacity: 0;
       }
-
       #display {
         width: 100%;
         height: 100%;
       }
-
       select,
       button {
         padding: 0.6em 0.4em;
@@ -87,25 +81,21 @@
         cursor: pointer;
         transition-duration: 0.2s;
       }
-
       select:hover,
       button:hover {
         background-color: #666;
         color: #ddd;
       }
-
       .logo {
         width: 130px;
         height: 130px;
         filter: drop-shadow(0 0 10px white);
       }
-
       #top {
         margin: 5px;
       }
     </style>
   </head>
-
   <body>
     <div id="top">
       <h1>EmulatorJS Demo</h1>
@@ -122,29 +112,48 @@
         let enableThreads = false;
 
         const urlParams = window.frameElement
-  .getAttribute("data-url")
-  .split("#")[1];
+          ? window.frameElement.getAttribute("data-url").split("#")[1]
+          : null;
+
+        async function handleZip(arrayBuffer) {
+          const zip = await JSZip.loadAsync(arrayBuffer);
+          // Find the first ROM-like file
+          const romFile = Object.keys(zip.files).find((f) =>
+            /\.(gba|gb|nes|snes|smc|n64|z64|nds)$/i.test(f)
+          );
+          if (!romFile) throw new Error("No ROM found inside zip");
+          const content = await zip.file(romFile).async("blob");
+          return URL.createObjectURL(content);
+        }
 
         if (urlParams) {
           let gameUrl = urlParams;
 
-          // If it's a shorthand like "$GBA/rom.gba"
- // Fix protocol slashes
-if (gameUrl.startsWith("https:/") && !gameUrl.startsWith("https://")) {
-  gameUrl = gameUrl.replace("https:/", "https://");
-}
-if (gameUrl.startsWith("http:/") && !gameUrl.startsWith("http://")) {
-  gameUrl = gameUrl.replace("http:/", "http://");
-}
+          // Fix protocol slashes
+          if (gameUrl.startsWith("https:/") && !gameUrl.startsWith("https://")) {
+            gameUrl = gameUrl.replace("https:/", "https://");
+          }
+          if (gameUrl.startsWith("http:/") && !gameUrl.startsWith("http://")) {
+            gameUrl = gameUrl.replace("http:/", "http://");
+          }
 
-          const parts = gameUrl.split(".");
+          let parts = gameUrl.split(".");
+          let ext = parts.pop().toLowerCase();
+
+          // Handle ZIPs specially
+          if (ext === "zip") {
+            const response = await fetch(gameUrl);
+            const arrayBuffer = await response.arrayBuffer();
+            gameUrl = await handleZip(arrayBuffer);
+            // Update extension based on extracted file
+            parts.push("gba"); // fallback, could detect from handleZip() filename
+            ext = "gba";
+          }
 
           const core = await (async (ext) => {
             if (["fds", "nes", "unif", "unf"].includes(ext)) return "nes";
             if (
-              ["smc", "fig", "sfc", "gd3", "gd7", "dx2", "bsx", "swc"].includes(
-                ext
-              )
+              ["smc", "fig", "sfc", "gd3", "gd7", "dx2", "bsx", "swc"].includes(ext)
             )
               return "snes";
             if (["z64", "n64"].includes(ext)) return "n64";
@@ -154,66 +163,8 @@ if (gameUrl.startsWith("http:/") && !gameUrl.startsWith("http://")) {
             if (["col", "cv"].includes(ext)) return "coleco";
             if (["d64"].includes(ext)) return "vice_x64sc";
             if (["nds", "gba", "gb", "z64", "n64"].includes(ext)) return ext;
-
-            return await new Promise((resolve) => {
-              var coreValues = {
-                "Nintendo 64": "n64",
-                "Nintendo Game Boy": "gb",
-                "Nintendo Game Boy Advance": "gba",
-                "Nintendo DS": "nds",
-                "Nintendo Entertainment System": "nes",
-                "Super Nintendo Entertainment System": "snes",
-                PlayStation: "psx",
-                "Virtual Boy": "vb",
-                "Sega Mega Drive": "segaMD",
-                "Sega Master System": "segaMS",
-                "Sega CD": "segaCD",
-                "Atari Lynx": "lynx",
-                "Sega 32X": "sega32x",
-                "Atari Jaguar": "jaguar",
-                "Sega Game Gear": "segaGG",
-                "Sega Saturn": "segaSaturn",
-                "Atari 7800": "atari7800",
-                "Atari 2600": "atari2600",
-                Arcade: "arcade",
-                "NEC TurboGrafx-16/SuperGrafx/PC Engine": "pce",
-                "NEC PC-FX": "pcfx",
-                "SNK NeoGeo Pocket (Color)": "ngp",
-                "Bandai WonderSwan (Color)": "ws",
-                ColecoVision: "coleco",
-                "Commodore 64": "vice_x64sc",
-                "Commodore 128": "vice_x128",
-                "Commodore VIC20": "vice_xvic",
-                "Commodore Plus/4": "vice_xplus4",
-                "Commodore PET": "vice_xpet",
-              };
-
-              const cores = Object.keys(coreValues)
-                .sort()
-                .reduce((obj, key) => {
-                  obj[key] = coreValues[key];
-                  return obj;
-                }, {});
-
-              const button = document.createElement("button");
-              const select = document.createElement("select");
-
-              for (const type in cores) {
-                const option = document.createElement("option");
-                option.value = cores[type];
-                option.textContent = type;
-                select.appendChild(option);
-              }
-
-              button.onclick = () =>
-                resolve(select[select.selectedIndex].value);
-              button.textContent = "Load game";
-              box.innerHTML = "";
-
-              box.appendChild(select);
-              box.appendChild(button);
-            });
-          })(parts.pop());
+            return "gba"; // fallback
+          })(ext);
 
           const div = document.createElement("div");
           const sub = document.createElement("div");

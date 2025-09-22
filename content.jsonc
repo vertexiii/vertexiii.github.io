@@ -6,6 +6,18 @@
 {
   "games": [
     {
+      "name": "Mario VS Donkey Kong 2: March of the Minis",
+      "icon": "icon/mariovsdonkeykong2.png",
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/MVDK2.zip",
+      "new": "true"
+    },    
+    {
+      "name": "Mario VS Donkey Kong",
+      "icon": "icon/mariovsdonkeykong.png",
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/MarioVSDonkeyKong.zip",
+      "new":"true"
+    }, 
+    {
       "name": "ONE BTN BOSSES",
       "icon": "icon/onebtnbosses.png",
       "url": "games/onebtnbosses/",
