@@ -2,9 +2,14 @@
   Store games as JSON objects
   for easy addition and sorting
 */
-
 {
   "games": [
+    {
+      "name": "Lored",
+      "icon": "icon/lored.png",
+      "url": "games/lored/",
+      "new": "true"
+    },
     {
       "name": "A Small World Cup",
       "icon": "icon/asmallworldcup.png",
@@ -100,7 +105,7 @@
       "name": "Pokémon Ultra Violet",
       "icon": "icon/pokemonultraviolet.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/UltraViolet.zip"
-    },    
+    },
     {
       "name": "Naruto Shippuden: Ninja Council 4",
       "icon": "icon/ninjacouncil4.png",
@@ -110,17 +115,17 @@
       "name": "Naruto Shippuden: Shinobi Rumble",
       "icon": "icon/narutoshinobirumble.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/NCSR.zip"
-    },    
+    },
     {
       "name": "Mario VS Donkey Kong 2",
       "icon": "icon/mariovsdonkeykong2.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/MVDK2.zip"
-    },    
+    },
     {
       "name": "Mario VS Donkey Kong",
       "icon": "icon/mariovsdonkeykong.png",
       "url": "$GBA/https://cedarisasigma.github.io/romfile/MarioVSDonkeyKong.zip"
-    }, 
+    },
     {
       "name": "PolyTrack",
       "icon": "icon/polytrack.png",
@@ -350,18 +355,17 @@
       "name": "Pokémon Ruby",
       "icon": "icon/pokemonruby.png",
       "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/pokemon-ruby.gba"
-    },    
+    },
     {
       "name": "Pokémon FireRed: Rocket Edition",
       "icon": "icon/pokemonfireredrocket.png",
       "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/firered-rocket-edition.gba"
     },
-    
     {
       "name": "Pokémon FireRed: Randomizer",
       "icon": "icon/pokemonfireredrandomizer.png",
       "url": "$GBA/https://eminence5070.github.io/apps/gbajs/binaries/fireredrandomizer.gba"
-    },    
+    },
     {
       "name": "Pokémon FireRed",
       "icon": "icon/pokemonfirered.png",
@@ -372,55 +376,46 @@
       "icon": "icon/pokemonemerald.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/pokemonemerald.gba"
     },
-    
     {
       "name": "Pokémon Sapphire",
       "icon": "icon/pokemonsapphire.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/pokemonsapphire.gba"
     },
-    
     {
       "name": "Street Fighter 2",
       "icon": "icon/streetfighter2.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/streetfighter2.gba"
     },
-    
     {
       "name": "Super Mario Bros",
       "icon": "icon/supermariobros.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/supermariobros.gba"
     },
-    
     {
       "name": "Super Mario Kart",
       "icon": "icon/supermariokart.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/supermariokart.smc"
     },
-    
     {
       "name": "Super Metroid",
       "icon": "icon/supermetroid.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/supermetroid.sfc"
     },
-    
     {
       "name": "Mario Kart 64",
       "icon": "icon/mariokart64.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/mariokart64.n64"
     },
-    
     {
       "name": "Mega Man X",
       "icon": "icon/megamanx.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/megamanx.smc"
     },
-    
     {
       "name": "Mortal Kombat 2",
       "icon": "icon/mortalkombat2.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/mortalkombat2.smc"
     },
-    
     {
       "name": "New Super Mario Bros",
       "icon": "icon/newsupermariobros.png",
@@ -430,17 +425,17 @@
       "name": "Banjo-Tooie",
       "icon": "icon/banjotooie.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/banjotooie.n64"
-    }, 
+    },
     {
       "name": "Animal Crossing: Wild World",
       "icon": "icon/animalcrossingwildworld.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/animalcrossingwildworld.nds"
-    }, 
+    },
     {
       "name": "Sandtrix",
       "icon": "icon/sandtrix.png",
       "url": "$GBA/https://eminence5070.github.io/apps/emulatorjs/sandtrix.gba"
-    },    
+    },
     {
       "name": "Flappy Bird",
       "icon": "icon/flappybird.png",
@@ -455,42 +450,42 @@
       "name": "Hex Empire",
       "icon": "icon/hexempire.png",
       "url": "$FLASH/hexempire.swf"
-    }, 
+    },
     {
       "name": "Grand Roulette",
       "icon": "icon/grandroulette.png",
       "url": "$FLASH/grandroulette.swf"
-    }, 
+    },
     {
       "name": "Mortal Kombat: Karnage",
       "icon": "icon/mortalkombatkarnage.png",
       "url": "$FLASH/mortalkombatkarnage.swf"
-    }, 
+    },
     {
       "name": "Learn to Fly 2",
       "icon": "icon/learn2fly.png",
       "url": "$FLASH/learn2fly.swf"
-    }, 
+    },
     {
       "name": "Jack Smith",
       "icon": "icon/jacksmith.png",
       "url": "$FLASH/jacksmith.swf"
-    }, 
+    },
     {
       "name": "MotherLoad",
       "icon": "icon/motherload.png",
       "url": "$FLASH/motherload.swf"
-    }, 
+    },
     {
       "name": "Poker",
       "icon": "icon/poker.png",
       "url": "$FLASH/poker.swf"
-    }, 
+    },
     {
       "name": "Plazma Burst 2",
       "icon": "icon/plazmaburst2.png",
       "url": "$FLASH/plazmaburst2.swf"
-    },    
+    },
     {
       "name": "Sierra 7",
       "icon": "icon/sierra7.png",
@@ -500,7 +495,7 @@
       "name": "Run 3",
       "icon": "icon/run3.png",
       "url": "$FLASH/run3.swf"
-    },    
+    },
     {
       "name": "Storm the House",
       "icon": "icon/stormthehouse.png",
@@ -510,22 +505,22 @@
       "name": "Storm the House 2",
       "icon": "icon/stormthehouse2.png",
       "url": "$FLASH/stormthehouse2.swf"
-    },    
+    },
     {
       "name": "Strike Force Heroes 2",
       "icon": "icon/strikeforceheroes2.png",
       "url": "$FLASH/strikeforceheroes2.swf"
-    },    
+    },
     {
       "name": "Strike Force Heroes 3",
       "icon": "icon/strikeforceheroes3.png",
       "url": "$FLASH/strikeforceheroes3.swf"
-    },    
+    },
     {
       "name": "Super Mario Flash 2",
       "icon": "icon/supermarioflash2.png",
       "url": "$FLASH/supermarioflash2.swf"
-    },    
+    },
     {
       "name": "Swords and Sandals",
       "icon": "icon/swordsandsandals.png",
@@ -535,7 +530,7 @@
       "name": "Swords and Sandals II",
       "icon": "icon/swordsandsandals2.png",
       "url": "$FLASH/swordsandsandals2.swf"
-    },    
+    },
     {
       "name": "Swords and Sandals: Crusader",
       "icon": "icon/swordsandsandalscrusader.png",
@@ -545,7 +540,7 @@
       "name": "Swords and Souls",
       "icon": "icon/swordsandsouls.png",
       "url": "$FLASH/swordsandsouls.swf"
-    },    
+    },
     {
       "name": "The Impossible Quiz 2",
       "icon": "icon/theimpossiblequiz2.png",
@@ -570,7 +565,7 @@
       "name": "Zombotron 2",
       "icon": "icon/zombotron2.png",
       "url": "$FLASH/zombotron2.swf"
-    },  
+    },
     {
       "name": "The Final Earth 2",
       "icon": "icon/thefinalearth2.png",
