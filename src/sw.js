@@ -14,7 +14,7 @@
     Also supports offline mode
 */
 
-const CACHE = 'VERTEX_CACHE';
+const CACHE_NAME = 'VERTEX_CACHE';
 
 // precache index page
 const PRECACHE_URLS = [
@@ -23,36 +23,44 @@ const PRECACHE_URLS = [
 ];
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(CACHE).then(cache => cache.addAll(PRECACHE_URLS))
+        caches.open(CACHE_NAME).then(CACHE => CACHE.addAll(PRECACHE_URLS))
     );
     self.skipWaiting();
 });
 
+// cleanup old caches
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys().then(keys =>
+            Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
+        )
+    );
+    self.clients.claim();
+});
+
 // adds listener to all network requests
 self.addEventListener('fetch', event => {
-    if (event.request.url.includes('content.jsonc')) {
+    const url = new URL(event.request.url);
+
+    if (url.pathname.endsWith('content.jsonc')) {
         event.respondWith(fetch(event.request)); // always fetch fresh content.jsonc
         return;
+    } else if (PRECACHE_URLS.includes(url.pathname)) {
+        // cache first for precached URLs
+        event.respondWith(
+            caches.match(event.request).then(cached => cached || fetch(event.request))
+        );
+        return;
     } else {
+        // network first for everything else
         event.respondWith((async () => {
-            const cache = await caches.open(CACHE);
-            const cachedResponse = await cache.match(event.request);
-
             try {
-                const networkResponse = await fetch(event.request);
-                const serverContent = await networkResponse.clone().text();
-                const cachedContent = cachedResponse ? await cachedResponse.text() : null;
-
-                // update cache if response differs from cached version
-                if (!cachedResponse || serverContent !== cachedContent) {
-                    await cache.put(event.request, networkResponse.clone());
-                    console.log('Cache updated for:', event.request.url);
-                }
-
-                return networkResponse;
+                const NETWORK_RESPONSE = await fetch(event.request);
+                const CACHE = await caches.open(CACHE_NAME);
+                CACHE.put(event.request, NETWORK_RESPONSE.clone());
+                return NETWORK_RESPONSE;
             } catch {
-                // network failed → serve cached response if available
-                if (cachedResponse) return cachedResponse;
+                return caches.match(event.request); // fallback if offline
             }
         })());
     }

@@ -6,232 +6,195 @@
 {
   "games": [
     {
+      "name": "A Small World Cup",
+      "icon": "icon/asmallworldcup.png",
+      "url": "https://asmall-worldcup.github.io/file/",
+      "new": "true"
+    },
+    {
       "name": "Legend of Zelda: A Link To The Past",
       "icon": "icon/lozpast.png",
-      "url": "$GBA/https://skere33.github.io/miemuladorWeb/binaries/roms/zelda_past.gba",
-      "new": "true"
+      "url": "$GBA/https://skere33.github.io/miemuladorWeb/binaries/roms/zelda_past.gba"
     },
     {
       "name": "Legend of Zelda: The Minish Cap",
       "icon": "icon/lozminishcap.png",
-      "url": "$GBA/https://skere33.github.io/miemuladorWeb/binaries/roms/zelda_minish.gba",
-      "new": "true"
+      "url": "$GBA/https://skere33.github.io/miemuladorWeb/binaries/roms/zelda_minish.gba"
     },
     {
       "name": "My Femboy Roomate",
       "icon": "icon/myfemboyroomate.png",
-      "url": "games/myfemboyroomate/",
-      "new": "true"
+      "url": "games/myfemboyroomate/"
     },
     {
       "name": "Super Mario 64",
       "icon": "icon/supermario64.png",
-      "url": "$GBA/https://bonviniv.github.io/nintendo64/Super%20Mario%2064/Super%20Mario%2064%20(USA).z64",
-      "new": "true"
+      "url": "$GBA/https://bonviniv.github.io/nintendo64/Super%20Mario%2064/Super%20Mario%2064%20(USA).z64"
     },
     {
       "name": "Pokémon Ash Gray",
       "icon": "icon/pokemonashgray.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/AshGray.zip",
-      "new": "true"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/AshGray.zip"
     },
     {
       "name": "Pokémon Cloud White",
       "icon": "icon/pokemoncloudwhite.png",
-      "url": "$GBA/https://superstarlex.github.io/Bellatrixgaming/Binaries/pokemonwhite.zip",
-      "new": "true"
+      "url": "$GBA/https://superstarlex.github.io/Bellatrixgaming/Binaries/pokemonwhite.zip"
     },
     {
       "name": "Pokémon Dark Violet",
       "icon": "icon/pokemondarkviolet.png",
-      "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-dark-violet.gba",
-      "new": "true"
+      "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-dark-violet.gba"
     },
     {
       "name": "Pokémon Elite Redux",
       "icon": "icon/pokemoneliteredux.png",
-      "url": "$GBA/https://download2348.mediafire.com/p2kup3bxh2agC9dowDbNaJF3p6ZW-ImxQ-nc-bqG6aui_MOFeJWWaDFamb5MqHY7Ld1djRxNOn7MHMEOO0KB9lrPaiW3xS5R6SD2KXxHThxTScGnuQkgO8PEgKfgmra5bnc4w6eQAbc5xgMnlMcZyzSa9KdD1DZVlpnvYS65Ng/mybggttbnt8139l/elite+redux+v2.5%282%29.zip",
-      "new": "true"
+      "url": "$GBA/https://download2348.mediafire.com/p2kup3bxh2agC9dowDbNaJF3p6ZW-ImxQ-nc-bqG6aui_MOFeJWWaDFamb5MqHY7Ld1djRxNOn7MHMEOO0KB9lrPaiW3xS5R6SD2KXxHThxTScGnuQkgO8PEgKfgmra5bnc4w6eQAbc5xgMnlMcZyzSa9KdD1DZVlpnvYS65Ng/mybggttbnt8139l/elite+redux+v2.5%282%29.zip"
     },
     {
       "name": "Pokémon Emerald Imperium",
       "icon": "icon/pokemonemeraldimperium.png",
-      "url": "$GBA/https://download2337.mediafire.com/hl37lyvld4ogmgnkdK1G2L5Fd7gfnfUapdaOQYiRXJQ035KuAngqpcTJQeIk5M8K2-virhbXxDeMYQBTW4lccA845n8oPMp5qklvpi9_jbyElpqJXgcpB6o34-tDs3zU0SLbjE4QGxgHHqDoYpNQvmA53crw3Bb8AcNm7Yo83A/48ayfii5xwu6nxj/imperium+v1.2.zip",
-      "new": "true"
+      "url": "$GBA/https://download2337.mediafire.com/hl37lyvld4ogmgnkdK1G2L5Fd7gfnfUapdaOQYiRXJQ035KuAngqpcTJQeIk5M8K2-virhbXxDeMYQBTW4lccA845n8oPMp5qklvpi9_jbyElpqJXgcpB6o34-tDs3zU0SLbjE4QGxgHHqDoYpNQvmA53crw3Bb8AcNm7Yo83A/48ayfii5xwu6nxj/imperium+v1.2.zip"
     },
     {
       "name": "Pokémon Flora Sky",
       "icon": "icon/pokemonflorasky.png",
-      "url": "$GBA/https://gba.js.org/binaries/pokemonflorasky.gba",
-      "new": "true"
+      "url": "$GBA/https://gba.js.org/binaries/pokemonflorasky.gba"
     },
     {
       "name": "Pokémon Glazed",
       "icon": "icon/pokemonglazed.png",
-      "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-glazed.gba",
-      "new": "true"
+      "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-glazed.gba"
     },
     {
       "name": "Pokémon LeafGreen",
       "icon": "icon/pokemonleafgreen.png",
-      "url": "$GBA/https://gba.js.org/binaries/pokemongreen.gba",
-      "new": "true"
+      "url": "$GBA/https://gba.js.org/binaries/pokemongreen.gba"
     },
     {
       "name": "Pokémon Light Platinum",
       "icon": "icon/pokemonlightplatinum.png",
-      "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-light-platinum.gba",
-      "new": "true"
+      "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-light-platinum.gba"
     },
     {
       "name": "Pokémon Mystery Dungeon: Red Rescue Team",
       "icon": "icon/pokemonmysterydungeonred.png",
-      "url": "$GBA/https://gba.js.org/binaries/mysteryred.gba",
-      "new": "true"
+      "url": "$GBA/https://gba.js.org/binaries/mysteryred.gba"
     },
     {
       "name": "Pokémon Saiph",
       "icon": "icon/pokemonsaiph.png",
-      "url": "$GBA/https://lowkimischeif.github.io/Binaries/Saiph.gba",
-      "new": "true"
+      "url": "$GBA/https://lowkimischeif.github.io/Binaries/Saiph.gba"
     },
     {
       "name": "Pokémon Sun Sky",
       "icon": "icon/pokemonsunsky.png",
-      "url": "$GBA/https://lowkimischeif.github.io/Binaries/SunSky.gba",
-      "new": "true"
+      "url": "$GBA/https://lowkimischeif.github.io/Binaries/SunSky.gba"
     },
     {
       "name": "Pokémon Mega X & Y",
       "icon": "icon/pokemonmegaxandy.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/XY.zip",
-      "new": "true"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/XY.zip"
     },
     {
       "name": "Pokémon Ultra Violet",
       "icon": "icon/pokemonultraviolet.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/UltraViolet.zip",
-      "new": "true"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/UltraViolet.zip"
     },    
     {
       "name": "Naruto Shippuden: Ninja Council 4",
       "icon": "icon/ninjacouncil4.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/NC4.zip",
-      "new": "true"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/NC4.zip"
     },
     {
       "name": "Naruto Shippuden: Shinobi Rumble",
       "icon": "icon/narutoshinobirumble.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/NCSR.zip",
-      "new": "true"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/NCSR.zip"
     },    
     {
       "name": "Mario VS Donkey Kong 2",
       "icon": "icon/mariovsdonkeykong2.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/MVDK2.zip",
-      "new": "true"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/MVDK2.zip"
     },    
     {
       "name": "Mario VS Donkey Kong",
       "icon": "icon/mariovsdonkeykong.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/MarioVSDonkeyKong.zip",
-      "new":"true"
-    }, 
-    {
-      "name": "ONE BTN BOSSES",
-      "icon": "icon/onebtnbosses.png",
-      "url": "games/onebtnbosses/",
-      "new": "true"
-    },
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/MarioVSDonkeyKong.zip"
+    }, ``
     {
       "name": "PolyTrack",
       "icon": "icon/polytrack.png",
-      "url": "games/polytrack/",
-      "new": "true"
+      "url": "games/polytrack/"
     },
     {
       "name": "COLORMUSE",
       "icon": "icon/colormuse.png",
-      "url": "games/colormuse/",
-      "new": "true"
+      "url": "games/colormuse/"
     },
     {
       "name": "Kill The Ice Age Baby",
       "icon": "icon/killtheiceagebaby.png",
-      "url": "games/killtheiceagebaby/",
-      "new": "true"
+      "url": "games/killtheiceagebaby/"
     },
     {
       "name": "Necro Chess",
       "icon": "icon/autonecrochess.png",
-      "url": "games/autonecrochess/",
-      "new": "true"
+      "url": "games/autonecrochess/"
     },
     {
       "name": "Time Shooter",
       "icon": "icon/timeshooter.png",
-      "url": "games/timeshooter/",
-      "new": "true"
+      "url": "games/timeshooter/"
     },
     {
       "name": "Time Shooter 3",
       "icon": "icon/timeshooter3.png",
-      "url": "games/timeshooter3/",
-      "new": "true"
+      "url": "games/timeshooter3/"
     },
     {
       "name": "Time Shooter 2",
       "icon": "icon/timeshooter2.png",
-      "url": "games/timeshooter2/",
-      "new": "true"
+      "url": "games/timeshooter2/"
     },
     {
       "name": "SUPERHOT",
       "icon": "icon/superhot.png",
-      "url": "games/superhot/",
-      "new": "true"
+      "url": "games/superhot/"
     },
     {
       "name": "Territorial.io",
       "icon": "icon/territorialio.png",
-      "url": "games/territorialio/",
-      "new": "true"
+      "url": "games/territorialio/"
     },
     {
       "name": "4x4",
       "icon": "icon/4x4.png",
-      "url": "games/4x4/",
-      "new": "true"
+      "url": "games/4x4/"
     },
     {
       "name": "Moto X3M",
       "icon": "icon/motox3m.png",
-      "url": "https://motox3munblocked.github.io/",
-      "new": "true"
+      "url": "https://motox3munblocked.github.io/"
     },
     {
       "name": "Moto X3M Spooky",
       "icon": "icon/motox3mspooky.png",
-      "url": "games/motox3mspooky/",
-      "new": "true"
+      "url": "games/motox3mspooky/"
     },
     {
       "name": "Moto X3M Pool Party",
       "icon": "icon/motox3mpoolparty.png",
-      "url": "games/motox3mpoolparty/",
-      "new": "true"
+      "url": "games/motox3mpoolparty/"
     },
     {
       "name": "Moto X3M 3",
       "icon": "icon/motox3m3.png",
-      "url": "games/motox3m3/",
-      "new": "true"
+      "url": "games/motox3m3/"
     },
     {
       "name": "Moto X3M 2",
       "icon": "icon/motox3m2.png",
-      "url": "games/motox3m2/",
-      "new": "true"
+      "url": "games/motox3m2/"
     },
     {
       "name": "Papa's Wingeria",
@@ -519,7 +482,7 @@
       "url": "$FLASH/motherload.swf"
     }, 
     {
-      "name": "Pokér",
+      "name": "Poker",
       "icon": "icon/poker.png",
       "url": "$FLASH/poker.swf"
     }, 

@@ -5,7 +5,6 @@
     and could definetly be improved
     but i am too lazy
     (dont fix what isnt broken)
-    #vibecoder
 */
 
 import { getSortedGames } from './Page.js';
