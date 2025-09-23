@@ -5,6 +5,12 @@
 {
   "games": [
     {
+      "name": "WildFire",
+      "icon": "icon/wildfire.png",
+      "url": "games/wildfire/",
+      "new": "true"
+    },
+    {
       "name": "Lored",
       "icon": "icon/lored.png",
       "url": "games/lored/",
