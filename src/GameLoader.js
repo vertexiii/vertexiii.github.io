@@ -87,11 +87,21 @@ export function loadGame(url, gameName, nav) {
         iframe.onload = () => Inject(iframe.contentDocument, url);
 
     // load roms using Emulator.JS
-    } else if (url.startsWith("$GBA/")) {
-        const romPath = url.replace("$GBA/", "");
-        iframe.src = `engine/emulatorjs/index.html`;
-        iframe.setAttribute("data-url", "launcher#" + romPath);
-        iframe.onload = () => Inject(iframe.contentDocument, url);
+} else if (url.startsWith("$GBA/")) {
+    const romPath = url.replace("$GBA/", "");
+    iframe.setAttribute(
+        "allow",
+        "autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
+    );
+
+    iframe.setAttribute("data-url", "launcher#" + romPath);
+
+    fetch("engine/emulatorjs/index.html")
+        .then(res => res.text())
+        .then(html => {
+            iframe.srcdoc = html;
+            iframe.onload = () => Inject(iframe.contentDocument, url);
+        });
 
     // fetch the game normally
     } else {
