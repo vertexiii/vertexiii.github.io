@@ -5,15 +5,9 @@
 {
   "games": [
     {
-      "name": "Clicker Heroes",
-      "icon": "icon/clickerheroes.png",
-      "url": "$SRChttps://fleshpanopticon.agguiopz.ip-dynamic.org/semag/clickerheroes/index.html",
-      "new": "true"
-    },
-    {
-      "name": "Castlevania: Aria of Sorrow",
-      "icon": "icon/castlevaniaariaofsorrow.png",
-      "url": "$GBA/https://www.planetemu.net/php/roms/download.php?token=f2b7de0de99911ae8954d20be81fb310",
+      "name": "The Coffin of Andy and Leyley",
+      "icon": "icon/thecoffinofandyandleyley.png",
+      "url": "games/thecoffinofandyandleyley/",
       "new": "true"
     },
     {
