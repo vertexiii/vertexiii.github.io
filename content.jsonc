@@ -17,12 +17,6 @@
       "new": "true"
     },
     {
-      "name": "The Coffin of Andy and Leyley",
-      "icon": "icon/thecoffinofandyandleyley.png",
-      "url": "games/thecoffinofandyandleyley/",
-      "new": "true"
-    },
-    {
       "name": "Castlevania: Aria of Sorrow",
       "icon": "icon/castlevaniaariaofsorrow.png",
       "url": "$GBA/https://jbassard97.github.io/pragmatic-popcorn/roms/gba/Castlevania/CAS.gba",
