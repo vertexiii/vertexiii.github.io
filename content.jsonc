@@ -5,22 +5,73 @@
 {
   "games": [
     {
+      "name": "Clicker Heroes",
+      "icon": "icon/clickerheroes.png",
+      "url": "$SRChttps://w58fj3ngj.github.io/platfaor/games/clicker-heros/index.html",
+      "new": "true"
+    },
+    {
+      "name": "Castlevania: Aria of Sorrow",
+      "icon": "icon/castlevaniaariaofsorrow.png",
+      "url": "$GBA/https://www.planetemu.net/php/roms/download.php?token=f2b7de0de99911ae8954d20be81fb310",
+      "new": "true"
+    },
+    {
+      "name": "Castlevania: Aria of Sorrow",
+      "icon": "icon/castlevaniaariaofsorrow.png",
+      "url": "$GBA/https://jbassard97.github.io/pragmatic-popcorn/roms/gba/Castlevania/CAS.gba",
+      "new": "true"
+    },
+    {
+      "name": "Boxing Random",
+      "icon": "icon/boxingrandom.png",
+      "url": "games/boxingrandom/",
+      "new": "true"
+    },
+    {
+      "name": "Basketball Stars",
+      "icon": "icon/basketballstars.png",
+      "url": "games/basketballstars/",
+      "new": "true"
+    },
+    {
+      "name": "Basket Bros",
+      "icon": "icon/basketbros.png",
+      "url": "https://basketballbros.org/game/basket-bros/",
+      "new": "true"
+    },
+    {
+      "name": "Achievement Unlocked 3",
+      "icon": "icon/achievementunlocked3.png",
+      "url": "$FLASH/https://rawcdn.githack.com/BinBashBanana/gstore/77d8f30a366b62f3e8e3cbe750b4bffe0031d53b/achievementunlocked3.swf",
+      "new": "true"
+    },
+    {
+      "name": "Achievement Unlocked 2",
+      "icon": "icon/achievementunlocked2.png",
+      "url": "$FLASH/https://rawcdn.githack.com/BinBashBanana/gstore/77d8f30a366b62f3e8e3cbe750b4bffe0031d53b/achievementunlocked2.swf",
+      "new": "true"
+    },
+    {
+      "name": "Achievement Unlocked",
+      "icon": "icon/achievementunlocked.png",
+      "url": "$FLASH/https://28jjjjackson.github.io/flash_achievementunlocked.swf",
+      "new": "true"
+    },
+    {
       "name": "WildFire",
       "icon": "icon/wildfire.png",
-      "url": "games/wildfire/",
-      "new": "true"
+      "url": "games/wildfire/"
     },
     {
       "name": "Lored",
       "icon": "icon/lored.png",
-      "url": "games/lored/",
-      "new": "true"
+      "url": "games/lored/"
     },
     {
       "name": "A Small World Cup",
       "icon": "icon/asmallworldcup.png",
-      "url": "https://asmall-worldcup.github.io/file/",
-      "new": "true"
+      "url": "https://asmall-worldcup.github.io/file/"
     },
     {
       "name": "Legend of Zelda: A Link To The Past",

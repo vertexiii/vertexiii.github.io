@@ -9,7 +9,7 @@
 // returns game frame
 export function getIframe() {
     let iframe = document.getElementById('vertex-iframe');
-    return iframe 
+    return iframe
 }
 
 // deletes game iframe
@@ -72,38 +72,44 @@ export function loadGame(url, gameName, nav) {
 
     // load flash games using ruffle
     if (url.startsWith("$FLASH/")) {
-        const swfPath = url.replace("$FLASH/", "flash/");
+        let swfPath = url.slice(7); // Remove "$FLASH/"
+
+        // If it's not a remote URL, prepend the local flash folder
+        if (!swfPath.startsWith("http")) {
+            swfPath = "flash/" + swfPath;
+        }
+
         localStorage.setItem("Vertex3.flashUrl", swfPath);
+
         fetch("engine/flash/index.html")
+            .then(res => res.text())
+            .then(html => {
+                iframe.srcdoc = html;
+                iframe.onload = () => Inject(iframe.contentDocument, swfPath);
+            });
+    }
+    else if (url.startsWith("$SRC")) {
+        iframe.src = url.replace("$SRC", "");
+        iframe.onload = () => Inject(iframe.contentDocument, url);
+
+        // load roms using Emulator.JS
+    } else if (url.startsWith("$GBA/")) {
+        const romPath = url.replace("$GBA/", "");
+        iframe.setAttribute(
+            "allow",
+            "autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
+        );
+
+        iframe.setAttribute("data-url", "launcher#" + romPath);
+
+        fetch("engine/emulatorjs/index.html")
             .then(res => res.text())
             .then(html => {
                 iframe.srcdoc = html;
                 iframe.onload = () => Inject(iframe.contentDocument, url);
             });
 
-    // directly load using src tag (NOT RECOMMENDED)
-    } else if (url.startsWith("$SRC")) {
-        iframe.src = url.replace("$SRC", "");
-        iframe.onload = () => Inject(iframe.contentDocument, url);
-
-    // load roms using Emulator.JS
-} else if (url.startsWith("$GBA/")) {
-    const romPath = url.replace("$GBA/", "");
-    iframe.setAttribute(
-        "allow",
-        "autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
-    );
-
-    iframe.setAttribute("data-url", "launcher#" + romPath);
-
-    fetch("engine/emulatorjs/index.html")
-        .then(res => res.text())
-        .then(html => {
-            iframe.srcdoc = html;
-            iframe.onload = () => Inject(iframe.contentDocument, url);
-        });
-
-    // fetch the game normally
+        // fetch the game normally
     } else {
         fetch(url)
             .then(res => res.text())
