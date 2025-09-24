@@ -5,6 +5,18 @@
 {
   "games": [
     {
+      "name": "Cut The Rope: Time Travel",
+      "icon": "icon/cuttheropetimetravel.png",
+      "url": "games/cuttheropetimetravel/",
+      "new":"true"
+    },
+    {
+      "name": "Cuphead",
+      "icon": "icon/cuphead.png",
+      "url": "games/cuphead/",
+      "new": "true"
+    },
+    {
       "name": "The Coffin of Andy and Leyley",
       "icon": "icon/thecoffinofandyandleyley.png",
       "url": "games/thecoffinofandyandleyley/",
