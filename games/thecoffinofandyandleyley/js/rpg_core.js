@@ -1244,7 +1244,7 @@ Bitmap.prototype.clear = function() {
  * @method fillRect
  * @param {Number} x The x coordinate for the upper-left corner
  * @param {Number} y The y coordinate for the upper-left corner
- * @param {Number} width The width of the rectangle to fill
+ * @param {Number} width The width of the rectangle to fill9
  * @param {Number} height The height of the rectangle to fill
  * @param {String} color The color of the rectangle in CSS format
  */
@@ -1664,31 +1664,44 @@ Bitmap.request = function(url){
     return bitmap;
 };
 
-Bitmap.prototype._requestImage = function(url){
-    if(Bitmap._reuseImages.length !== 0){
+Bitmap.prototype._requestImage = function(url) {
+    if (Bitmap._reuseImages.length !== 0) {
         this._image = Bitmap._reuseImages.pop();
-    }else{
+    } else {
         this._image = new Image();
     }
 
+    // 👇 always set crossOrigin before setting src
+    this._image.crossOrigin = "anonymous";
+
     if (this._decodeAfterRequest && !this._loader) {
-        this._loader = ResourceHandler.createLoader(url, this._requestImage.bind(this, url), this._onError.bind(this));
+        this._loader = ResourceHandler.createLoader(
+            url,
+            this._requestImage.bind(this, url),
+            this._onError.bind(this)
+        );
     }
 
-    this._image = new Image();
     this._url = url;
-    this._loadingState = 'requesting';
+    this._loadingState = "requesting";
 
-    if(!Decrypter.checkImgIgnore(url) && Decrypter.hasEncryptedImages) {
-        this._loadingState = 'decrypting';
+    if (!Decrypter.checkImgIgnore(url) && Decrypter.hasEncryptedImages) {
+        this._loadingState = "decrypting";
         Decrypter.decryptImg(url, this);
     } else {
         this._image.src = url;
 
-        this._image.addEventListener('load', this._loadListener = Bitmap.prototype._onLoad.bind(this));
-        this._image.addEventListener('error', this._errorListener = this._loader || Bitmap.prototype._onError.bind(this));
+        this._image.addEventListener(
+            "load",
+            (this._loadListener = Bitmap.prototype._onLoad.bind(this))
+        );
+        this._image.addEventListener(
+            "error",
+            (this._errorListener = this._loader || Bitmap.prototype._onError.bind(this))
+        );
     }
 };
+
 
 Bitmap.prototype.isRequestOnly = function(){
     return !(this._decodeAfterRequest || this.isReady());
