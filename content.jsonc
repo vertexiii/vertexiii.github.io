@@ -131,7 +131,7 @@
     {
       "name": "Pokémon LeafGreen",
       "icon": "icon/pokemonleafgreen.png",
-      "url": "$GBA/https://gba.js.org/binaries/pokemongreen.gba"
+      "url": "$GBA/https://rawcdn.githack.com/srojam/gba/58893088e3805baaf716e0af6801aaeeae1a0efb/Binaries/pokemongreen.gba"
     },
     {
       "name": "Pokémon Light Platinum",
@@ -146,12 +146,12 @@
     {
       "name": "Pokémon Saiph",
       "icon": "icon/pokemonsaiph.png",
-      "url": "$GBA/https://lowkimischeif.github.io/Binaries/Saiph.gba"
+      "url": "$GBA/https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/PK%20Saiph%20Full%20v2020%20Patch.zip"
     },
     {
       "name": "Pokémon Sun Sky",
       "icon": "icon/pokemonsunsky.png",
-      "url": "$GBA/https://lowkimischeif.github.io/Binaries/SunSky.gba"
+      "url": "$GBA/https://rawcdn.githack.com/vbaemulator/GBA-Roms/f8ff9ba91598a5e996f29c7c27342f062faa989d/Pokemon%20Sun%20Sky.zip"
     },
     {
       "name": "Pokémon Mega X & Y",
