@@ -116,17 +116,17 @@
     {
       "name": "Pokémon Emerald Imperium",
       "icon": "icon/pokemonemeraldimperium.png",
-      "url": "$GBA/https://download2337.mediafire.com/hl37lyvld4ogmgnkdK1G2L5Fd7gfnfUapdaOQYiRXJQ035KuAngqpcTJQeIk5M8K2-virhbXxDeMYQBTW4lccA845n8oPMp5qklvpi9_jbyElpqJXgcpB6o34-tDs3zU0SLbjE4QGxgHHqDoYpNQvmA53crw3Bb8AcNm7Yo83A/48ayfii5xwu6nxj/imperium+v1.2.zip"
+      "url": "$GBA/https://pub-4cffee67954749c7814c2f7ea99b1978.r2.dev/emeraldimp.gba"
     },
     {
       "name": "Pokémon Flora Sky",
       "icon": "icon/pokemonflorasky.png",
-      "url": "$GBA/https://gba.js.org/binaries/pokemonflorasky.gba"
+      "url": "$GBA/https://rawcdn.githack.com/srojam/gba/58893088e3805baaf716e0af6801aaeeae1a0efb/Binaries/pokemonflorasky.gba"
     },
     {
       "name": "Pokémon Glazed",
       "icon": "icon/pokemonglazed.png",
-      "url": "$GBA/https://cdn.jsdelivr.net/gh/JoshMerlino/shsg-pfile/games/pokemon-glazed.gba"
+      "url": "$GBA/https://raw.githack.com/TrapjawwS/funnyemulatorjs/main/romhacks/Glazed%20v8.6.3.zip"
     },
     {
       "name": "Pokémon LeafGreen",
