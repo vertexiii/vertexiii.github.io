@@ -184,11 +184,6 @@
       "url": "$GBA/https://cedarisasigma.github.io/romfile/MarioVSDonkeyKong.zip"
     },
     {
-      "name": "PolyTrack",
-      "icon": "icon/polytrack.png",
-      "url": "games/polytrack/"
-    },
-    {
       "name": "COLORMUSE",
       "icon": "icon/colormuse.png",
       "url": "games/colormuse/"
