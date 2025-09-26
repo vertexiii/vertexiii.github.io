@@ -166,17 +166,17 @@
     {
       "name": "Naruto Shippuden: Ninja Council 4",
       "icon": "icon/ninjacouncil4.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/NC4.zip"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/NC4.nds"
     },
     {
       "name": "Naruto Shippuden: Shinobi Rumble",
       "icon": "icon/narutoshinobirumble.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/NCSR.zip"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/NCSR.nds"
     },
     {
       "name": "Mario VS Donkey Kong 2",
       "icon": "icon/mariovsdonkeykong2.png",
-      "url": "$GBA/https://cedarisasigma.github.io/romfile/MVDK2.zip"
+      "url": "$GBA/https://cedarisasigma.github.io/romfile/mvdk2.nds"
     },
     {
       "name": "Mario VS Donkey Kong",
