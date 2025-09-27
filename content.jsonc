@@ -84,11 +84,6 @@
       "url": "$GBA/https://skere33.github.io/miemuladorWeb/binaries/roms/zelda_minish.gba"
     },
     {
-      "name": "My Femboy Roomate",
-      "icon": "icon/myfemboyroomate.png",
-      "url": "games/myfemboyroomate/"
-    },
-    {
       "name": "Super Mario 64",
       "icon": "icon/supermario64.png",
       "url": "$GBA/https://bonviniv.github.io/nintendo64/Super%20Mario%2064/Super%20Mario%2064%20(USA).z64"
